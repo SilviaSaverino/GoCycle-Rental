@@ -13,3 +13,12 @@ body {
     background-color: #fafafa;
     padding: 20px 60px;
 }
+
+span {
+    color: #31B2C5;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none; 
+}

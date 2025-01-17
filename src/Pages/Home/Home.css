@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.intro {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.intro h1,h1 span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.intro h2 {
+    font-weight: 500;
+}
+
+.intro p {
+    margin: 10px 0;
+}
+
+.intro_btn {
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    width: 50%;
+    border: none;
+    background-color: #31B2C5;
+    color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.iconList {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconList li {
+    display: flex;
+    align-items: center;
+}
+
+.iconList img {
+    width: 50px;
+    margin: 5px 10px 5px 0;
+}
+

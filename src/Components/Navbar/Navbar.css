@@ -13,21 +13,20 @@ nav {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
-ul {
+nav ul {
     color: #004882;
-    list-style-type: none; 
     display: flex; 
     align-items: center;
     gap: 20px; 
     cursor: pointer;
 }
 
-li {
+nav li {
     padding: 5px 10px;
     border-radius: 15px;
 }
 
-li:hover {
+nav li:hover {
     background-color: #31B2C5;
     color: white;
 }
