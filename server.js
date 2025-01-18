@@ -177,8 +177,9 @@ createServer({
 
   routes() {
     this.namespace = "api";
+    this.logging = false
 
-    this.get("/bicycles", (schema) => {
+    this.get("/bicycles", (schema, request) => {
       return schema.bicycles.all();
     });
 
