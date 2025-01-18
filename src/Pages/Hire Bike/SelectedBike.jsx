@@ -16,19 +16,22 @@ export default function RentBikes() {
         <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
             <div className="bikesInfo">
-                <h3>{bike.name}</h3>
-                <p>£<span>{bike.price}</span>/day</p> 
+                <h2>{bike.name}</h2>
+                <p>{bike.description}</p>
+                <h3>£<span>{bike.price}</span>/day</h3>
             </div>
-            <button className="bikesInfo-btn">Learn More</button>
         </div>
     ))
 
     return (
         <>
-        <h1>Explore our bikes selection</h1>
-            <div className="bikes-container">
+        <div className="bikes-container">
+            <h1>Explore our bikes selection</h1>
+            <div>
                 {bikes}
             </div>
+        </div>
+        
         </>
     )
 }

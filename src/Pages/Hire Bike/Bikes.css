@@ -1,31 +1,49 @@
-.bikesInfo-container {
+.bikes-container {
+    padding: 30px;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.bikesInfo-container {
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: 10px auto;
-    /* border: 1px solid black; */
+    margin: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .bikesInfo-container img {
     width: 50%;
-    /* border: 1px solid black; */
+    height: 100%;
 }
 
 .bikesInfo {
-    width: 30%;
-    /* border: 1px solid black; */
-    padding: 20px;
-
+    display: flex;
+    text-align: left;
+    width: 50%;
 }
 
-.bikesInfo h2,.bikesInfo h3 {
-    font-size: 1.9rem;
+.bikesInfo h3 {
+    /* font-size: 1.2rem; */
     font-weight: 600;
     color: #31B2C5;
 }
 
-.bikesInfo p {
-    margin: 10px 0;
+.bikesInfo h2 {
+    color: #31B2C5;
 }
 
+.bikesInfo h3 {
+    color: #004882;
+}
+
+.bikesInfo p {
+    margin: 10px 0;
+    font-size: 0.8rem;
+}
+
+.bikesInfo-btn {
+    width: 100%;
+}

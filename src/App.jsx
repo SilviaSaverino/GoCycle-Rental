@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">
     <Navbar />
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="GoCycle-Rental/" element={<HomePage />} />
       <Route path="about/" element={<About />} />
       <Route path="contactus/" element={<ContactUs />} />
       <Route path="help/" element={<Help />} />

@@ -28,3 +28,14 @@ a {
     /* color: #31B2C5; */
 }
 
+button {
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+button:hover {
+    background-color: #31B2C5;
+    color: white;
+}
+

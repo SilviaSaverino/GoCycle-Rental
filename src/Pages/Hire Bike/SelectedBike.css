@@ -1,0 +1,44 @@
+.bikes-container {
+    padding: 30px;
+    }
+    
+    .bikesInfo-container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 415px;
+        margin: 10px auto;
+        border: 1px solid black;
+    }
+    
+    .bikesInfo-container img {
+        width: 50%;
+        /* border: 1px solid black; */
+    }
+    
+    .bikesInfo {
+        width: 40%;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+    }
+    
+    .bikesInfo h2,.bikesInfo h3 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: #31B2C5;
+    }
+    
+    .bikesInfo h2{
+        color: #31B2C5;
+    }
+    
+    .bikesInfo h3{
+        color: #004882;
+    }
+    
+    .bikesInfo p {
+        margin: 10px 0;
+        font-size: 0.8rem;
+    }
+    
+    
