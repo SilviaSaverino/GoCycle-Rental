@@ -1,17 +1,28 @@
 import React from "react"
 
 export default function RentBikes() {
-   
-    
+
+    const [bicycles, setBicycles] = React.useState([])
+
     React.useEffect(() => {
         fetch("/api/bicycles")
-        .then(res=> res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+            .then(data => setBicycles(data.bicycles))
     }, [])
 
-
+    const bikes = bicycles.map(bike => (
+        <div key={bike.id}>
+            <h2>{bike.name}</h2>
+            <img src={bike.imageUrl} alt={bike.name} />
+            <p>{bike.description}</p>
+            <p>Price: £{bike.price}</p>
+        </div>
+    ))
 
     return (
-        <h1>Rent a Bike page</h1>
+        <>
+            <h1>Hire a Bike page</h1>
+            {bikes}
+        </>
     )
 }
