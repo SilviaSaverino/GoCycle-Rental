@@ -1,0 +1,31 @@
+.bikesInfo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    /* border: 1px solid black; */
+}
+
+.bikesInfo-container img {
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.bikesInfo {
+    width: 30%;
+    /* border: 1px solid black; */
+    padding: 20px;
+
+}
+
+.bikesInfo h2,.bikesInfo h3 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #31B2C5;
+}
+
+.bikesInfo p {
+    margin: 10px 0;
+}
+

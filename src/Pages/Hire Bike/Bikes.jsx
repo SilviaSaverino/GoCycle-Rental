@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./Bikes.css"
 
 
 export default function RentBikes() {
@@ -13,11 +13,13 @@ export default function RentBikes() {
     }, [])
 
     const bikes = bicycles.map(bike => (
-        <div key={bike.id}>
-            <h2>{bike.name}</h2>
+        <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
-            <p>{bike.description}</p>
-            <p>Price: £{bike.price}</p>
+            <div className="bikesInfo">
+                <h2>{bike.name}</h2>
+                <p>{bike.description}</p>
+                <h3>£<span>{bike.price}</span></h3>
+            </div>
         </div>
     ))
 
