@@ -22,3 +22,9 @@ span {
 ul {
     list-style-type: none; 
 }
+
+a {
+    text-decoration: none;
+    /* color: #31B2C5; */
+}
+
