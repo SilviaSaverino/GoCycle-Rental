@@ -1,9 +1,10 @@
+/* General Container Styles */
 .hire-container {
     padding: 30px;
 }
 
-h1 {
-    margin: 20px;
+.top-container {
+    margin: 20px 0;
 }
 
 .bikes-container {
@@ -12,6 +13,7 @@ h1 {
     gap: 10px;
 }
 
+/* Bikes Info Container */
 .bikesInfo-container {
     width: 100%;
     flex: 20%;
@@ -31,9 +33,15 @@ h1 {
     padding: 10px;
 }
 
+/* Typography */
 .bikesInfo h3 {
     font-size: 1.5rem;
     font-weight: 600;
+    color: #004882;
+}
+
+h1 {
+    font-weight: bold;
     color: #004882;
 }
 
@@ -41,16 +49,28 @@ h1 {
     color: #31B2C5;
 }
 
-.bikesInfo-btn {
+/* Buttons */
+button {
     background-color: #00488214;
-    margin-top: 10px;
-    text-align: left;
-    width: 45%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.arrow-icon {
+.bikesInfo-btn {
+    margin-top: 10px;
+    text-align: left;
+    width: 45%;
+}
+
+.top-container button {
+    margin: 5px;
+    padding: 5px 10px;
+    width: 6%;
+    display: inline-flex;
+}
+
+/* Icon Styles */
+.icon {
     color: #004882;
 }
