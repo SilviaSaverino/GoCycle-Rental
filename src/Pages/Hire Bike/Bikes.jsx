@@ -1,5 +1,8 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Bikes.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function RentBikes() {
@@ -18,17 +21,22 @@ export default function RentBikes() {
             <div className="bikesInfo">
                 <h3>{bike.name}</h3>
                 <p>£<span>{bike.price}</span>/day</p> 
+                <button className="bikesInfo-btn">Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="arrow-icon" /></button>
             </div>
-            <button className="bikesInfo-btn">Learn More</button>
+            
         </div>
     ))
 
     return (
-        <>
+        <div className="hire-container">
         <h1>Explore our bikes selection</h1>
+        <div className="btn-container">
+            <button>Filter</button>
+            <button>Sort</button>
+        </div>
             <div className="bikes-container">
                 {bikes}
             </div>
-        </>
+        </div>
     )
 }

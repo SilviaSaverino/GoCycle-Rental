@@ -37,6 +37,10 @@
     font-size: 1.2rem;
 }
 
+.intro_btn:hover {
+    background-color: #004882;
+}
+
 .iconList {
     display: flex;
     flex-direction: column;

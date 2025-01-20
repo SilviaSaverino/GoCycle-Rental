@@ -1,4 +1,5 @@
 import { React } from 'react'
+import { Link } from "react-router-dom"
 import './Home.css'
 import HeroImg from '../../assets/img/hero.png'
 import seatIcon from '../../assets/img/seat_icon.png'
@@ -34,7 +35,7 @@ function HomePage() {
               safe and smooth ride.</p>
             </li>
           </ul>
-          <button className='intro_btn'>Hire a bike</button>
+          <Link to='/HireBike/'><button className='intro_btn'>Hire a bike</button></Link>
           </div>
       </div>
     </>
