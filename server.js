@@ -42,7 +42,7 @@ createServer({
                 "Whether you're navigating through dense forest paths or climbing steep slopes, this bike is engineered to keep up with your explorations." +
                 "The Mountain Explorer is an excellent choice for those who seek a reliable, versatile, and high-performing off-road companion.",
             imageUrl: mountain1,
-            type: "mountain",
+            type: "Mountain",
         });
         server.create("bicycle", {
             id: "2",
@@ -57,7 +57,7 @@ createServer({
                 "Offering a balance of durability and high performance, the Trail Blazer is perfect for those who crave thrilling off-road adventures." +
                 "This bike is the ideal partner for tackling trails and exploring the great outdoors.",
             imageUrl: mountain2,
-            type: "mountain",
+            type: "Mountain",
         });
         server.create("bicycle", {
             id: "3",
@@ -72,7 +72,7 @@ createServer({
                 "The Hill Conqueror is a top choice for adventurers looking to tackle hills and explore difficult trails." +
                 "Its thoughtful design empowers riders to conquer new heights with confidence and ease.",
             imageUrl: mountain3,
-            type: "mountain",
+            type: "Mountain",
         });
         server.create("bicycle", {
             id: "4",
@@ -87,7 +87,7 @@ createServer({
                 "Whether you're hopping over rocks or navigating rugged landscapes, the Rock Hopper delivers unmatched reliability." +
                 "This bike is an excellent choice for those who love off-road adventures and tough terrains.",
             imageUrl: mountain4,
-            type: "mountain",
+            type: "Mountain",
         });
         server.create("bicycle", {
             id: "5",
@@ -102,7 +102,7 @@ createServer({
                 "Whether you're exploring forests, mountains, or winding paths, the Adventure Seeker excels in every setting." +
                 "This bike is tailored for explorers who demand reliability and performance in all their adventures.",
             imageUrl: mountain5,
-            type: "mountain",
+            type: "Mountain",
         });
 
         // Road Bikes
@@ -119,7 +119,7 @@ createServer({
                 "The Road Champion is a perfect choice for serious cyclists aiming to excel in speed and endurance." +
                 "With its combination of efficiency and performance, this bike stands out on any road.",
             imageUrl: road1,
-            type: "road",
+            type: "Road",
         });
         server.create("bicycle", {
             id: "7",
@@ -134,7 +134,7 @@ createServer({
                 "The Speedster Elite is ideal for riders looking to push their limits in races or endurance challenges." +
                 "With its precision engineering and top-tier components, this bike is made to deliver excellence.",
             imageUrl: road2,
-            type: "road",
+            type: "Road",
         });
         server.create("bicycle", {
             id: "8",
@@ -149,7 +149,7 @@ createServer({
                 "The Endurance Racer is the perfect companion for those aiming to cover long distances comfortably." +
                 "With its balance of performance and comfort, it’s a top choice for endurance enthusiasts.",
             imageUrl: road3,
-            type: "road",
+            type: "Road",
         });
         server.create("bicycle", {
             id: "9",
@@ -164,7 +164,7 @@ createServer({
                 "The Urban Speed is ideal for those who value functionality and style in their daily transportation." +
                 "It’s a practical and reliable choice for navigating the urban jungle.",
             imageUrl: road4,
-            type: "road",
+            type: "Road",
         });
         server.create("bicycle", {
             id: "10",
@@ -179,7 +179,7 @@ createServer({
                 "The Cyclone Pro is the ultimate choice for those who prioritize speed, control, and quality." +
                 "Whether you're racing or training, this bike will help you achieve your goals.",
             imageUrl: road5,
-            type: "road",
+            type: "Road",
         });
 
         // Electric Bikes
@@ -196,7 +196,7 @@ createServer({
                 "The Electric Adventurer is a great choice for eco-conscious riders who value both convenience and performance." +
                 "With its innovative features, it’s designed to make cycling more enjoyable and accessible.",
             imageUrl: electric1,
-            type: "electric",
+            type: "Electric",
         });
         server.create("bicycle", {
             id: "12",
@@ -211,7 +211,7 @@ createServer({
                 "The Eco Rider is perfect for riders seeking an eco-friendly alternative for daily transportation." +
                 "Combining practicality with modern aesthetics, it’s a standout choice for urban cyclists.",
             imageUrl: electric2,
-            type: "electric",
+            type: "Electric",
         });
         server.create("bicycle", {
             id: "13",
@@ -226,7 +226,7 @@ createServer({
                 "The Green Commuter makes cycling enjoyable, while promoting an environmentally friendly lifestyle." +
                 "This e-bike is perfect for those who want a practical yet stylish mode of transport.",
             imageUrl: electric3,
-            type: "electric",
+            type: "Electric",
         });
         server.create("bicycle", {
             id: "14",
@@ -241,7 +241,7 @@ createServer({
                 "Whether you’re exploring off-road paths or cruising around town, this bike delivers excellence." +
                 "It’s a premium choice for cyclists who value both functionality and performance.",
             imageUrl: electric4,
-            type: "electric",
+            type: "Electric",
         });
         server.create("bicycle", {
             id: "15",
@@ -256,7 +256,7 @@ createServer({
                 "This e-bike is an ideal choice for those seeking a reliable, efficient, and stylish way to travel." +
                 "It offers a seamless blend of technology, performance, and sustainability.",
             imageUrl: electric5,
-            type: "electric",
+            type: "Electric",
         });
 
         // Kids Bikes
@@ -272,7 +272,7 @@ createServer({
                 "With its fun design and practical features, it’s perfect for young learners taking their first rides." +
                 "Parents can trust this bike to provide a safe and enjoyable experience for their kids.",
             imageUrl: kids1,
-            type: "kids",
+            type: "Kids",
         });
         server.create("bicycle", {
             id: "17",
@@ -286,7 +286,7 @@ createServer({
                 "It’s the perfect bike for kids eager to discover new trails and enjoy nature." +
                 "Parents will appreciate its durability and safety-focused features.",
             imageUrl: kids2,
-            type: "kids",
+            type: "Kids",
         });
         server.create("bicycle", {
             id: "18",
@@ -301,7 +301,7 @@ createServer({
                 "The Mini Explorer inspires kids to enjoy outdoor exploration while building their cycling skills." +
                 "Parents can trust this bike to provide a safe and enjoyable experience for their children.",
             imageUrl: kids3,
-            type: "kids",
+            type: "Kids",
         });
         server.create("bicycle", {
             id: "19",
@@ -316,7 +316,7 @@ createServer({
                 "This bike is perfect for fostering confidence and independence in children while they have fun." +
                 "Parents will appreciate its durability and focus on safety.",
             imageUrl: kids4,
-            type: "kids",
+            type: "Kids",
         });
         server.create("bicycle", {
             id: "20",
@@ -331,7 +331,7 @@ createServer({
                 "The Tiny Trekker encourages kids to embrace the excitement of cycling while building essential skills." +
                 "Parents can rely on its safety-focused design and robust construction for peace of mind.",
             imageUrl: kids5,
-            type: "kids",
+            type: "Kids",
         });
     },
 

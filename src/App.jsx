@@ -8,6 +8,7 @@ import About from './Pages/About/About.jsx'
 import ContactUs from './Pages/Contact Us/Contact.jsx'
 import Help from './Pages/Help/Help.jsx'
 import HireBike from './Pages/Hire Bike/Bikes.jsx'
+import BikeInfo from './Pages/Hire Bike/BikeInfo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="contactus/" element={<ContactUs />} />
       <Route path="help/" element={<Help />} />
       <Route path="hirebike/" element={<HireBike />} />
+      <Route path="/bikeinfo/:id" element={<BikeInfo />} />
     </Routes>
   </BrowserRouter>
 )

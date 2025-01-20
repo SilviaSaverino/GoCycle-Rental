@@ -15,14 +15,19 @@ export default function RentBikes() {
     }, [])
 
     const bikes = bicycles.map(bike => (
+
         <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
             <div className="bikesInfo">
                 <h3>{bike.name}</h3>
+                <p>Type: {bike.type} bike</p>
                 <p>£<span>{bike.price}</span>/day</p>
-                <button className="bikesInfo-btn">Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" /></button>
+                <Link to={`/bikeinfo/${bike.id}`}>
+                    <button className="bikesInfo-btn">Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" /></button>
+                </Link>
             </div>
         </div>
+
     ))
 
     return (

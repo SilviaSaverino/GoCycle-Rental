@@ -30,8 +30,9 @@
     cursor: pointer;
     display: block;
     margin: 10px auto;
-    width: 50%;
+    width: 100%;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     background-color: #31B2C5;
     color: #fafafa;
     padding: 10px 20px;
