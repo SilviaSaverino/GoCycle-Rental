@@ -33,6 +33,17 @@
     padding: 10px;
 }
 
+/* Availability Container*/
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.not-available {
+    color: #b63603; 
+}
+
 /* Typography */
 .bikesInfo h3 {
     font-size: 1.5rem;
@@ -58,14 +69,13 @@ button {
 }
 
 .bikesInfo-btn {
-    margin-top: 10px;
     text-align: left;
-    width: 45%;
+    width: 100%;
+    gap: 15px;
 }
 
 .top-container button {
     margin: 5px;
-    padding: 5px 10px;
     width: 6%;
     display: inline-flex;
 }
@@ -74,3 +84,4 @@ button {
 .icon {
     color: #004882;
 }
+

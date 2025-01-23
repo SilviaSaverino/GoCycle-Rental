@@ -32,6 +32,7 @@ createServer({
         server.create("bicycle", {
             id: "1",
             name: "Mountain Explorer",
+            available: true,
             price: "500.00",
             description:
                 "A rugged bicycle specifically designed for off-road adventures," +
@@ -47,6 +48,7 @@ createServer({
         server.create("bicycle", {
             id: "2",
             name: "Trail Blazer",
+            available: false,
             price: "550.00",
             description:
                 "The Trail Blazer is built for cyclists who love tackling tough terrains," +
@@ -62,6 +64,7 @@ createServer({
         server.create("bicycle", {
             id: "3",
             name: "Hill Conqueror",
+            available: true,
             price: "450.00",
             description:
                 "Designed for steep inclines and rugged paths," +
@@ -77,6 +80,7 @@ createServer({
         server.create("bicycle", {
             id: "4",
             name: "Rock Hopper",
+            available: true,
             price: "600.00",
             description:
                 "The Rock Hopper is built to thrive on rocky terrains," +
@@ -92,6 +96,7 @@ createServer({
         server.create("bicycle", {
             id: "5",
             name: "Adventure Seeker",
+            available: false,
             price: "350.00",
             description:
                 "For thrill-seekers and adventurers, the Adventure Seeker is the perfect companion," +
@@ -109,6 +114,7 @@ createServer({
         server.create("bicycle", {
             id: "6",
             name: "Road Champion",
+            available: true,
             price: "250.00",
             description:
                 "Designed for speed and endurance," +
@@ -124,6 +130,7 @@ createServer({
         server.create("bicycle", {
             id: "7",
             name: "Speedster Elite",
+            available: false,
             price: "375.00",
             description:
                 "The Speedster Elite is a high-performance road bike built for competitive cycling," +
@@ -139,6 +146,7 @@ createServer({
         server.create("bicycle", {
             id: "8",
             name: "Endurance Racer",
+            available: true,
             price: "425.00",
             description:
                 "The Endurance Racer is tailored for cyclists seeking comfort without sacrificing speed," +
@@ -154,6 +162,7 @@ createServer({
         server.create("bicycle", {
             id: "9",
             name: "Urban Speed",
+            available: true,
             price: "375.00",
             description:
                 "The Urban Speed is a versatile road bike crafted for city living," +
@@ -169,6 +178,7 @@ createServer({
         server.create("bicycle", {
             id: "10",
             name: "Cyclone Pro",
+            available: false,
             price: "400.00",
             description:
                 "The Cyclone Pro is a premium road bike engineered for advanced riders," +
@@ -186,6 +196,7 @@ createServer({
         server.create("bicycle", {
             id: "11",
             name: "Electric Adventurer",
+            available: false,
             price: "250.00",
             description:
                 "The Electric Adventurer blends technology with practicality," +
@@ -201,6 +212,7 @@ createServer({
         server.create("bicycle", {
             id: "12",
             name: "Eco Rider",
+            available: true,
             price: "400.00",
             description:
                 "The Eco Rider is a stylish and sustainable electric bike designed for urban commuting," +
@@ -216,6 +228,7 @@ createServer({
         server.create("bicycle", {
             id: "13",
             name: "Green Commuter",
+            available: false,
             price: "500.00",
             description:
                 "The Green Commuter is a modern e-bike that prioritizes style and efficiency," +
@@ -231,6 +244,7 @@ createServer({
         server.create("bicycle", {
             id: "14",
             name: "Power Pedaler",
+            available: true,
             price: "350.00",
             description:
                 "The Power Pedaler is a high-performance electric bike built for both adventure and leisure," +
@@ -246,6 +260,7 @@ createServer({
         server.create("bicycle", {
             id: "15",
             name: "Volt Voyager",
+            available: true,
             price: "300.00",
             description:
                 "The Volt Voyager is a premium electric bike that combines innovation with rider comfort," +
@@ -263,6 +278,7 @@ createServer({
         server.create("bicycle", {
             id: "16",
             name: "Junior Cruiser",
+            available: false,
             price: "45.00",
             description: "The Junior Cruiser is a beginner-friendly bike designed for young riders," +
                 "featuring a lightweight frame for easy handling and maneuverability." +
@@ -277,6 +293,7 @@ createServer({
         server.create("bicycle", {
             id: "17",
             name: "Trail Rider Kids",
+            available: true,
             price: "55,00",
             description: "The Trail Rider Kids is a sturdy and reliable bike for adventurous young cyclists," +
                 "featuring a strong frame designed to handle rough paths and trails." +
@@ -291,6 +308,7 @@ createServer({
         server.create("bicycle", {
             id: "18",
             name: "Mini Explorer",
+            available: false,
             price: "75.00",
             description:
                 "The Mini Explorer is a perfect bike for family outings," +
@@ -306,6 +324,7 @@ createServer({
         server.create("bicycle", {
             id: "19",
             name: "Speedy Junior",
+            available: true,
             price: "65.00",
             description:
                 "The Speedy Junior is a fun and fast bike tailored for energetic kids," +
@@ -321,6 +340,7 @@ createServer({
         server.create("bicycle", {
             id: "20",
             name: "Tiny Trekker",
+            available: true,
             price: "50.00",
             description:
                 "The Tiny Trekker is a durable bike designed for adventurous young riders," +

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./Bikes.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare, faFilter, faSort } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare,faCalendarDays, faFilter, faSort } from '@fortawesome/free-solid-svg-icons';
 
 export default function RentBikes() {
 
@@ -15,19 +15,31 @@ export default function RentBikes() {
     }, [])
 
     const bikes = bicycles.map(bike => (
-
         <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
             <div className="bikesInfo">
                 <h3>{bike.name}</h3>
                 <p>Type: {bike.type} bike</p>
                 <p>£<span>{bike.price}</span>/day</p>
-                <Link to={`/bikeinfo/${bike.id}`}>
-                    <button className="bikesInfo-btn">Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" /></button>
-                </Link>
+                <div className="availability">
+                    {bike.available ?
+                        <>
+                            <span className="available">Available</span>
+                            <Link to={`/bikeinfo/${bike.id}`}>
+                                <button className="bikesInfo-btn">Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" /></button>
+                            </Link>
+                        </>
+                        :
+                        <>
+                            <span className="not-available">Not Available</span>
+                            <Link to={`/bikeinfo/${bike.id}`}>
+                                <button className="bikesInfo-btn"> Check Availability <FontAwesomeIcon icon={faCalendarDays} className="icon"/></button>
+                            </Link>
+                        </>
+                    }
+                </div>
             </div>
         </div>
-
     ))
 
     return (
