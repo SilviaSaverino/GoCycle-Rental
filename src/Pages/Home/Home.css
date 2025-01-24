@@ -12,15 +12,6 @@
     margin: 0 auto;
 }
 
-.intro h1, h1 span {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.intro h2 {
-    font-weight: 500;
-}
-
 .intro p {
     margin: 10px 0;
 }

@@ -2,7 +2,6 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import "../server"
 import './App.css'
-// import Navbar from './Components/Navbar/Navbar'
 import HomePage from './Pages/Home/Home.jsx'
 import About from './Pages/About/About.jsx'
 import ContactUs from './Pages/Contact Us/Contact.jsx'
@@ -13,7 +12,6 @@ import Layout from './Components/Layout/Layout.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">
-    {/* <Navbar /> */}
     <Routes>
       <Route element={<Layout/>}>
         <Route path="GoCycle-Rental/" element={<HomePage />} />
