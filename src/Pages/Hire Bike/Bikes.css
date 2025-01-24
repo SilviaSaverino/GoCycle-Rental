@@ -10,7 +10,7 @@
 .bikes-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 /* Bikes Info Container */
@@ -84,4 +84,3 @@ button {
 .icon {
     color: #004882;
 }
-

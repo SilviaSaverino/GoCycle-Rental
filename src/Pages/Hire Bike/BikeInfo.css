@@ -1,8 +1,6 @@
 .productInfo-container {
     display: flex;
     align-items: center;
-    width: 80%;
-    height: 415px;
     margin: 10px auto;
 }
 
@@ -60,6 +58,5 @@
 .not-availableBox span {
     color: #fafafa;
 }
-
 
 
