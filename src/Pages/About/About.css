@@ -1,4 +1,4 @@
-.about-article {
+/* .about-article {
     display: flex;
     justify-content: space-between;
 }
@@ -29,7 +29,7 @@ ul li {
 
   }
   
-  /* Create four equal columns that sits next to each other */
+  /* equal columns that sits next to each other 
   .column {
     flex: 50%;
     max-width: 50%;
@@ -42,4 +42,5 @@ ul li {
     vertical-align: middle;
     width: 100%;
     object-fit: cover;
-  }
+  } */
+
