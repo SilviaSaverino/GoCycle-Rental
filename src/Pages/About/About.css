@@ -1,46 +1,46 @@
-/* .about-article {
-    display: flex;
-    justify-content: space-between;
-}
-.about-container {
+.about-article {
     padding: 30px;
-    width: 60%;
 }
 
-.about-container h2 {
+.about-article h2 {
     color: #31B2C5;
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-ul li {
-    margin-bottom: 15px;
-}
-
-.about-reviews {
-    width: 40%;
-    border: 1px solid #31B2C5;
-}
-
-.row {
+.about-top-section {   
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    width: 90%;
+    align-items: center; 
+    justify-content: space-evenly; 
+}
 
-  }
-  
-  /* equal columns that sits next to each other 
-  .column {
-    flex: 50%;
-    max-width: 50%;
-    padding: 0 4px;
-   
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
+.about-top-text {
+    width: 70%;
+} 
+
+.about-top-images {
+    width: 30%;
+    padding: 20px;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px; 
+}
+
+.about-top-images img{
     width: 100%;
     object-fit: cover;
-  } */
+    aspect-ratio: 1/1;
+}
 
+.about-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-middle-section img {
+ margin: 0 auto;
+ display: block;
+}
+
+.about-middle-section li {
+    margin-bottom: 15px;
+}
