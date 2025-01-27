@@ -1,10 +1,9 @@
-.about-article {
-    padding: 30px;
-}
 
 .about-article h2 {
     color: #31B2C5;
     margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .about-top-section {   
@@ -32,8 +31,8 @@
 }
 
 .about-container {
-    width: 90%;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .about-middle-section img {
@@ -44,3 +43,20 @@
 .about-middle-section li {
     margin-bottom: 15px;
 }
+
+.about-bottom-section {
+    display: flex;
+    align-items: center; 
+}
+
+.about-mission, .about-vision {
+    width: 50%;
+}
+
+.about-mission img, .about-vision img {
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}
+
+
