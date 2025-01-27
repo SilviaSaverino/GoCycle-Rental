@@ -11,7 +11,7 @@ function Navbar() {
         <img className="logo" src={logo} alt="Logo of GoCycle Rental website" />
         <ul>
           <li>
-            <Link to='GoCycle-Rental/'>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
             <Link to='about/'>About Us</Link>

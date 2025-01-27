@@ -10,8 +10,8 @@ export default function AboutLayout() {
                 <nav className="about-dashboard">
                     <ul>
                         <li><Link to="/about/">About Us</Link></li>
-                        <li> <Link to="/about/gallery">Gallery</Link></li>
-                        <li> <Link to="/about/reviews">Reviews</Link></li>
+                        <li><Link to="/about/gallery">Gallery</Link></li>
+                        <li><Link to="/about/reviews">Reviews</Link></li>
                     </ul>
                 </nav>
             </div>
