@@ -47,6 +47,10 @@
     align-items: center;
 }
 
+.iconList li p{
+ margin-left: 10px;
+}
+
 .iconList img {
     width: 50px;
     margin: 5px 10px 5px 0;
