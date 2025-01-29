@@ -1,5 +1,5 @@
 /* General Container */
-.container {
+.home-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,4 +50,8 @@
 .iconList img {
     width: 50px;
     margin: 5px 10px 5px 0;
+}
+
+.home-container img{
+ margin: 0 auto;
 }

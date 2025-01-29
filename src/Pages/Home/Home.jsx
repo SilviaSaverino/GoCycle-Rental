@@ -9,7 +9,7 @@ import gearIcon from '../../assets/img/gear_icon.png'
 function HomePage() {
   return (
     <>
-      <div className='container'>
+      <div className='home-container'>
         <img src={HeroImg} alt="Hero image of a bike" />
         <div className='intro'>
           <h1><span>Go</span>Cycle</h1>

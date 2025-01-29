@@ -31,7 +31,7 @@ export default function Gallery() {
             <div className="parent">
                 {galleryImg.slice(0, divCount).map((gallery, i) => (
                     <div key={i} className={`div${i + 1}`}>
-                        <img src={gallery.imageUrl} alt={gallery.name} />
+                        <img className="gallery-img" src={gallery.imageUrl} alt={gallery.name} />
                     </div>
                 ))}
             </div>
