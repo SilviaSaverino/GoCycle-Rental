@@ -20,11 +20,23 @@ import kids3 from "./src/assets/img/bikes/kids3.png";
 import kids4 from "./src/assets/img/bikes/kids4.png";
 import kids5 from "./src/assets/img/bikes/kids5.png";
 
+import gallery1 from "./src/assets/img/gallery/gallery1.png";
+import gallery2 from "./src/assets/img/gallery/gallery2.png";
+import gallery3 from "./src/assets/img/gallery/gallery3.png";
+import gallery4 from "./src/assets/img/gallery/gallery4.png";
+import gallery5 from "./src/assets/img/gallery/gallery5.png";
+import gallery6 from "./src/assets/img/gallery/gallery6.png";
+import gallery7 from "./src/assets/img/gallery/gallery7.png";
+import gallery8 from "./src/assets/img/gallery/gallery8.png";
+import gallery9 from "./src/assets/img/gallery/gallery9.png";
+import gallery10 from "./src/assets/img/gallery/gallery10.png";
+
 
 
 createServer({
     models: {
         bicycles: Model,
+        galleries: Model,
     },
 
     seeds(server) {
@@ -353,9 +365,62 @@ createServer({
             imageUrl: kids5,
             type: "Kids",
         });
+
+                //Gallery
+                server.create("gallery", {
+                    id: "1",
+                    imageUrl: gallery1,
+                    name:"gallery image 1",
+                });
+                server.create("gallery", {
+                    id: "2",
+                    imageUrl: gallery2,
+                    name:"gallery image 2",
+                });
+                server.create("gallery", {
+                    id: "3",
+                    imageUrl: gallery3,
+                    name:"gallery image 3",
+                });
+                server.create("gallery", {
+                    id: "4",
+                    imageUrl: gallery4,
+                    name:"gallery image 4",
+                });
+                server.create("gallery", {
+                    id: "5",
+                    imageUrl: gallery5,
+                    name:"gallery image 5",
+                });
+                server.create("gallery", {
+                    id: "6",
+                    imageUrl: gallery6,
+                    name:"gallery image 6",
+                });
+                server.create("gallery", {
+                    id: "7",
+                    imageUrl: gallery7,
+                    name:"gallery image 7",
+                });
+                server.create("gallery", {
+                    id: "8",
+                    imageUrl: gallery8,
+                    name:"gallery image 8",
+                });
+                server.create("gallery", {
+                    id: "9",
+                    imageUrl: gallery9,
+                    name:"gallery image 9",
+                });
+                server.create("gallery", {
+                    id: "10",
+                    imageUrl: gallery10,
+                    name:"gallery image 10",
+                });
     },
 
     routes() {
+        // Bikes
         this.namespace = "api";
         this.logging = false
 
@@ -367,5 +432,18 @@ createServer({
             const id = request.params.id;
             return schema.bicycles.find(id);
         });
+
+        // Gallery
+        this.get("/galleries", (schema, request) => {
+            return schema.galleries.all();
+        });
+
+        this.get("/galleries/:id", (schema, request) => {
+            const id = request.params.id;
+            return schema.galleries.find(id);
+        });
+       
+
     },
+
 });
