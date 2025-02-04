@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import './Navbar.css'
 import logo from '../../assets/img/logo_gocycle.png'
 
@@ -11,19 +11,29 @@ function Navbar() {
         <img className="logo" src={logo} alt="Logo of GoCycle Rental website" />
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <NavLink
+              to='/'
+              className={({ isActive }) => isActive ? "active-link" : null}>Home</NavLink>
           </li>
           <li>
-            <Link to='about/'>About Us</Link>
+            <NavLink
+              to='about/'
+              className={({ isActive }) => isActive ? "active-link" : null}>About Us</NavLink>
           </li>
           <li>
-            <Link to='ContactUs/'>Contact Us</Link> 
+            <NavLink
+              to='ContactUs/'
+              className={({ isActive }) => isActive ? "active-link" : null}>Contact Us</NavLink>
           </li>
           <li>
-            <Link to='Help/'>Help</Link> 
+            <NavLink
+              to='Help/'
+              className={({ isActive }) => isActive ? "active-link" : null}>Help</NavLink>
           </li>
           <li>
-            <Link to='HireBike/'>Hire Bike</Link> 
+            <NavLink
+              to='HireBike/'
+              className={({ isActive }) => isActive ? "active-link" : null}>Hire Bike</NavLink>
           </li>
         </ul>
       </nav>

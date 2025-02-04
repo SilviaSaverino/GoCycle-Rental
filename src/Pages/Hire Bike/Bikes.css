@@ -13,6 +13,13 @@
     gap: 20px;
 }
 
+.loading-bikes {
+    margin: 0 auto;
+    height: 100vh;
+    font-size: 1.6em;
+    color: #004882;
+}
+
 /* Bikes Info Container */
 .bikesInfo-container {
     width: 100%;

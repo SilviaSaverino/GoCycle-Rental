@@ -14,11 +14,11 @@ export default function Gallery() {
     const gallery = galleryImg.map(gallery => (
         <img src={gallery.imageUrl} alt={gallery.name} />
     ))
-
-
     return (
         <>
-            {/* - galleryImg.slice(0, divCount) takes the first 10 images from galleryImg 
+            {galleryImg.length > 0 ? (
+                 <>
+                 {/* - galleryImg.slice(0, divCount) takes the first 10 images from galleryImg 
             (if there are that many) and returns a new array containing just those images.
 
             - .map() iterates over that new array and creates a new <div> for each image.
@@ -28,15 +28,19 @@ export default function Gallery() {
             
             - Inside each <div>, an <img> tag is created with the src pointing to the imageUrl of the 
             gallery item and alt text set to the name of the item. */}
-            <div className="parent">
-                {galleryImg.slice(0, divCount).map((gallery, i) => (
-                    <div key={i} className={`div${i + 1}`}>
-                        <img className="gallery-img" src={gallery.imageUrl} alt={gallery.name} />
-                    </div>
-                ))}
-            </div>
-            <button className="gallery-btn">Load more...</button>
-        </>
+                <div className="parent">
+                    {galleryImg.slice(0, divCount).map((gallery, i) => (
+                        <div key={i} className={`div${i + 1}`}>
+                            <img className="gallery-img" src={gallery.imageUrl} alt={gallery.name} />
+                        </div>
+                    ))}
+                </div>
+                 <button className="gallery-btn">Load more...</button>
+                 </>
+            ) : (
+                <p className="loading-gallery">Loading...</p> 
+            )}
+         </>  
+        
     )
-}
-
+}   

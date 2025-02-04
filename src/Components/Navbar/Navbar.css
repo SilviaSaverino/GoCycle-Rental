@@ -22,13 +22,7 @@ nav ul {
 }
 
 nav li {
-    padding: 5px 10px;
     border-radius: 15px;
+    list-style: none; 
 }
-
-nav li:hover {
-    background-color: #31B2C5;
-    color: white; 
-}
-
 

@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div classNameName="terms">
-                    <p>© 2024 GoCycle Rental. All rights reserved.</p>
+                    <p>&#169; 2024 GoCycle Rental. All rights reserved.</p>
                     <p>
                         <a href="#">Terms & Conditions</a> |
                         <a href="#"> Privacy Policy</a>
