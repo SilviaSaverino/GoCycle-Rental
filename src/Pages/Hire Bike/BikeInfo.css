@@ -1,12 +1,14 @@
+.info-container {
+    padding: 30px;
+}
+
 .productInfo-container {
     display: flex;
     align-items: center;
-    margin: 10px auto;
 }
 
 .productInfo {
     width: 40%;
-    margin: 0 auto;
 }
 
 .productInfo h2, .productInfo h3 {
@@ -39,6 +41,7 @@
 .productImage-container {
     width: 50%;
     position: relative;
+    margin: 0 auto;
 }
 
 .productImage-container img {
@@ -61,9 +64,7 @@
 }
 
 .back-link {
-    padding: 30px;
-    display: flex; 
-    justify-content: end;
+    display: inline-block; 
     transition: all 0.3s ease-in-out;
 }
 
@@ -96,3 +97,6 @@
 }
 
 
+.productInfo nav {
+    box-shadow: none;
+}

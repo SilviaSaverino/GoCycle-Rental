@@ -21,7 +21,8 @@ export default function BikeInfo() {
 
     return (
         <>
-            <div className="back-link">
+        <div className="info-container">
+        <div className="back-link">
                 <Link
                     to="../HireBike/"
                 > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
@@ -30,6 +31,22 @@ export default function BikeInfo() {
             <div className="productInfo-container">
                 <div className="productInfo">
                     <h2>{selectedBike.name}</h2>
+                    <nav>
+                        <ul>
+                            <li>
+                                Intro
+                            </li>
+                            <li>
+                                Specification
+                            </li>
+                            <li>
+                                Geometry
+                            </li>
+                            <li>
+                                Review
+                            </li>
+                        </ul>
+                    </nav>
                     <p>{selectedBike.description}</p>
                     <h3>£<span>{selectedBike.price}</span>/day</h3>
                     {selectedBike.available ?
@@ -53,6 +70,9 @@ export default function BikeInfo() {
                 </div>
             </div>
             {/* <BikeAvailability /> */}
+
+        </div>
+            
         </>
     );
 }

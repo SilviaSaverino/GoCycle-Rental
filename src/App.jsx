@@ -16,7 +16,7 @@ import Reviews from './Pages/Reviews/Reviews.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">
     <Routes>
-      <Route path="/" element={<Layout/>}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
 
         <Route path="about" element={<AboutLayout />} >
@@ -28,7 +28,13 @@ createRoot(document.getElementById('root')).render(
         <Route path="contactus/" element={<ContactUs />} />
         <Route path="help/" element={<Help />} />
         <Route path="hirebike/" element={<HireBike />} />
-        <Route path="bikeinfo/:id" element={<BikeInfo />} />
+
+        <Route path="bikeinfo/:id" element={<BikeInfo />} >
+          <Route index element={<Intro />} />
+          <Route path="Specifications" element={<Specification />} />
+          <Route path="Geometry" element={<Geometry />} />
+          <Route path="Review" element={<Review />} />
+        </Route>
       </Route>
     </Routes>
   </BrowserRouter>
