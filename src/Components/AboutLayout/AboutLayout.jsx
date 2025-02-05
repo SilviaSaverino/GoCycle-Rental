@@ -10,14 +10,14 @@ export default function AboutLayout() {
                 <nav className="about-dashboard">
                     <ul>
                         <li><NavLink
-                            to="/about/"
+                            to="."
                             end  // end props ensures "About Us" is only active on /about/ and not on its subroutes.
                             className={({ isActive }) => isActive ? "active-link" : null}>About Us</NavLink></li>
                         <li><NavLink
-                            to="/about/gallery"
+                            to="gallery"
                             className={({ isActive }) => isActive ? "active-link" : null}>Gallery</NavLink></li>
                         <li><NavLink
-                            to="/about/reviews"
+                            to="reviews"
                             className={({ isActive }) => isActive ? "active-link" : null}>Reviews</NavLink></li>
                     </ul>
                 </nav>

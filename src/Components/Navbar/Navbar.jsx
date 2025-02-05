@@ -12,7 +12,7 @@ function Navbar() {
         <ul>
           <li>
             <NavLink
-              to='/'
+              to='.'
               className={({ isActive }) => isActive ? "active-link" : null}>Home</NavLink>
           </li>
           <li>
