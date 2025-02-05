@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, Outlet, NavLink } from "react-router-dom"
 import "./BikeInfo.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -21,58 +21,64 @@ export default function BikeInfo() {
 
     return (
         <>
-        <div className="info-container">
-        <div className="back-link">
-                <Link
-                    to="../HireBike/"
-                > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
+            <div className="info-container">
+                <div className="back-link">
+                    <Link
+                        to="../HireBike/"
+                    > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
+                </div>
+
+                <div className="productInfo-container">
+                    <div className="productInfo">
+                        <h2>{selectedBike.name}</h2>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <NavLink to="."
+                                        end
+                                        className={({ isActive }) => isActive ? "active-link" : null}>Intro</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="specification"
+                                        className={({ isActive }) => isActive ? "active-link" : null}>Specification</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="geometry"
+                                        className={({ isActive }) => isActive ? "active-link" : null}>Geometry</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="review"
+                                        className={({ isActive }) => isActive ? "active-link" : null}>Review</NavLink>
+                                </li>
+                            </ul>
+                        </nav>
+                        <p>{selectedBike.description}</p>
+                        <h3>£<span>{selectedBike.price}</span>/day</h3>
+                        <Outlet />
+                        {selectedBike.available ?
+                            <button className="intro_btn">Rent Now</button>
+                            :
+                            <button className="intro_btn">Check Next Availability</button>
+                        }
+                    </div>
+                    <div className="productImage-container">
+                        <img
+                            src={selectedBike.imageUrl}
+                            alt={`Image of ${selectedBike.name} bike`}
+                        />
+                        {!selectedBike.available &&
+                            <>
+                                <div className="not-availableBox">
+                                    <span>Currently Not Available</span>
+                                </div>
+                            </>
+                        }
+                    </div>
+                </div>
+                {/* <BikeAvailability /> */}
+
             </div>
 
-            <div className="productInfo-container">
-                <div className="productInfo">
-                    <h2>{selectedBike.name}</h2>
-                    <nav>
-                        <ul>
-                            <li>
-                                Intro
-                            </li>
-                            <li>
-                                Specification
-                            </li>
-                            <li>
-                                Geometry
-                            </li>
-                            <li>
-                                Review
-                            </li>
-                        </ul>
-                    </nav>
-                    <p>{selectedBike.description}</p>
-                    <h3>£<span>{selectedBike.price}</span>/day</h3>
-                    {selectedBike.available ?
-                        <button className="intro_btn">Rent Now</button>
-                        :
-                        <button className="intro_btn">Check Next Availability</button>
-                    }
-                </div>
-                <div className="productImage-container">
-                    <img
-                        src={selectedBike.imageUrl}
-                        alt={`Image of ${selectedBike.name} bike`}
-                    />
-                    {!selectedBike.available &&
-                        <>
-                            <div className="not-availableBox">
-                                <span>Currently Not Available</span>
-                            </div>
-                        </>
-                    }
-                </div>
-            </div>
-            {/* <BikeAvailability /> */}
-
-        </div>
-            
         </>
     );
 }
