@@ -60,4 +60,39 @@
     color: #fafafa;
 }
 
+.back-link {
+    padding: 30px;
+    display: flex; 
+    justify-content: end;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.back-link p {
+    font-size: 1.2em;
+    color: #004882;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-link p:hover{
+    color: #31B2C5;
+}
+
+.back-link:hover .icon {
+    animation: bounceLeft 0.8s ease-in-out infinite;
+}
+
+@keyframes bounceLeft {
+    0% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(-10px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
 

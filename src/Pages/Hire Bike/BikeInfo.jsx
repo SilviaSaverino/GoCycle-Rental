@@ -1,6 +1,8 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import "./BikeInfo.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 // import BikeAvailability from "../../Components/Bike Availability/BikeAvailability"
 
 export default function BikeInfo() {
@@ -19,32 +21,38 @@ export default function BikeInfo() {
 
     return (
         <>
-        <div className="productInfo-container">
-            <div className="productInfo">
-                <h2>{selectedBike.name}</h2>
-                <p>{selectedBike.description}</p>
-                <h3>£<span>{selectedBike.price}</span>/day</h3>
-                {selectedBike.available ?
-                    <button className="intro_btn">Rent Now</button>
-                    :
-                    <button className="intro_btn">Check Next Availability</button>
-                }
+            <div className="back-link">
+                <Link
+                    to="../HireBike/"
+                > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
             </div>
-            <div className="productImage-container">
-                <img
-                    src={selectedBike.imageUrl}
-                    alt={`Image of ${selectedBike.name} bike`}
-                />
-                {!selectedBike.available &&
-                    <>
-                        <div className="not-availableBox">
-                            <span>Currently Not Available</span>
-                        </div>
-                    </>
-                }
+
+            <div className="productInfo-container">
+                <div className="productInfo">
+                    <h2>{selectedBike.name}</h2>
+                    <p>{selectedBike.description}</p>
+                    <h3>£<span>{selectedBike.price}</span>/day</h3>
+                    {selectedBike.available ?
+                        <button className="intro_btn">Rent Now</button>
+                        :
+                        <button className="intro_btn">Check Next Availability</button>
+                    }
+                </div>
+                <div className="productImage-container">
+                    <img
+                        src={selectedBike.imageUrl}
+                        alt={`Image of ${selectedBike.name} bike`}
+                    />
+                    {!selectedBike.available &&
+                        <>
+                            <div className="not-availableBox">
+                                <span>Currently Not Available</span>
+                            </div>
+                        </>
+                    }
+                </div>
             </div>
-        </div>
-        {/* <BikeAvailability /> */}
+            {/* <BikeAvailability /> */}
         </>
     );
 }
