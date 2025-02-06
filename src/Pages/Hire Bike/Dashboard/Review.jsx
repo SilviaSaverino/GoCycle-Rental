@@ -2,6 +2,9 @@ import React from "react"
 
 export default function Review() {
     return (
-        <h1>Review</h1>
+        <div className="intro-container">
+ <h1>Review</h1>
+        </div>
+       
     )
 }

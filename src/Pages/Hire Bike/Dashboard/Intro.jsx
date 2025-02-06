@@ -1,8 +1,15 @@
 import React from "react"
+import { useOutletContext } from "react-router-dom"
 
 export default function Intro() {
+
+    const { selectedBike } = useOutletContext()
     return (
-       <h1>Intro</h1>
-       
+        <>
+            <div className="outlet-container">
+                <h3>£<span>{selectedBike.price}</span>/day</h3>
+                <p>{selectedBike.description}</p>
+            </div>
+        </>
     )
 }

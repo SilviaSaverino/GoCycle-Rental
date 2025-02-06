@@ -27,7 +27,6 @@ export default function BikeInfo() {
                         to="../HireBike/"
                     > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
                 </div>
-
                 <div className="productInfo-container">
                     <div className="productInfo">
                         <h2>{selectedBike.name}</h2>
@@ -52,14 +51,16 @@ export default function BikeInfo() {
                                 </li>
                             </ul>
                         </nav>
-                        <p>{selectedBike.description}</p>
-                        <h3>£<span>{selectedBike.price}</span>/day</h3>
-                        <Outlet />
-                        {selectedBike.available ?
-                            <button className="intro_btn">Rent Now</button>
-                            :
-                            <button className="intro_btn">Check Next Availability</button>
-                        }
+                        <div className="outlet-container">
+                            <Outlet context={{ selectedBike }} />
+                        </div>
+                       
+                            {selectedBike.available ?
+                                <button className="intro_btn">Rent Now</button>
+                                :
+                                <button className="intro_btn">Check Next Availability</button>
+                            }
+                        
                     </div>
                     <div className="productImage-container">
                         <img
@@ -76,9 +77,7 @@ export default function BikeInfo() {
                     </div>
                 </div>
                 {/* <BikeAvailability /> */}
-
             </div>
-
         </>
     );
 }
