@@ -56,6 +56,46 @@ createServer({
                 "The Mountain Explorer is an excellent choice for those who seek a reliable, versatile, and high-performing off-road companion.",
             imageUrl: mountain1,
             type: "Mountain",
+            specifications: {
+                frameset: {
+                    frame: "Tarmac SL7 FACT 9r Carbon",
+                    fork: "FACT Carbon, 12x100mm thru-axle, flat-mount disc"
+                },
+                wheels: {
+                    rims: "DT R470 Disc",
+                    tyres: "Turbo Pro, 700x26"
+                },
+                drivetrain: {
+                    crankset: "Shimano 105, 12-speed",
+                    shifters: "Shimano 105 Di2 R7170, 12-speed",
+                    frontDerailleur: "Shimano 105 Di2, Braze-on",
+                    rearDerailleur: "Shimano 105 Di2",
+                    chain: "Shimano SLX M7100, 12-speed w/ quick link",
+                    cassette: "Shimano 105, 12-speed, 11-34t",
+                    bottomBracket: "Shimano Threaded BSA BB"
+                },
+                components: {
+                    handlebar: "Specialized Shallow Drop, 6061, 70x125mm, 31.8mm clamp",
+                    stem: "Tarmac integrated stem, 6-degree",
+                    grips: "Supacaz Super Sticky Kush",
+                    brakes: "Shimano 105, Hydraulic disc",
+                    saddle: "Body Geometry Power Sport, steel rails",
+                    seatpost: "2021 Tarmac Carbon seat post, FACT Carbon, 20mm offset",
+                    seatBinder: "Tarmac integrated wedge"
+                }
+            },
+            geometry: {
+                frame: "Tarmac SL7 FACT 9r Carbon",
+                fork: "FACT Carbon, 12x100mm thru-axle, flat-mount disc",
+                shifters: "Shimano 105 Di2 R7170, 12-speed",
+                rearDerailleur: "Shimano 105 Di2",
+                frontDerailleur: "Shimano 105 Di2, Braze-on",
+                chainset: "Shimano 105, 12-speed",
+                bottomBracket: "Shimano Threaded BSA BB",
+                chain: "Shimano SLX M7100, 12-speed w/ quick link",
+                tyres: "Turbo Pro, 700x26",
+                brakes: "Shimano 105, Hydraulic disc"
+            }
         });
         server.create("bicycle", {
             id: "2",
@@ -72,6 +112,46 @@ createServer({
                 "This bike is the ideal partner for tackling trails and exploring the great outdoors.",
             imageUrl: mountain2,
             type: "Mountain",
+            specifications: {
+                frameset: {
+                    frame: "Aluminum, Fully Suspended Frame",
+                    fork: "RockShox Recon RL 120mm Travel"
+                },
+                wheels: {
+                    rims: "WTB ST i29 TCS 2.0",
+                    tyres: "Maxxis Minion DHF 27.5x2.3"
+                },
+                drivetrain: {
+                    crankset: "SRAM NX Eagle 12-speed",
+                    shifters: "SRAM NX Eagle Trigger",
+                    frontDerailleur: "None",
+                    rearDerailleur: "SRAM NX Eagle 12-speed",
+                    chain: "SRAM NX Eagle",
+                    cassette: "SRAM PG-1230 11-50t",
+                    bottomBracket: "SRAM DUB BSA30"
+                },
+                components: {
+                    handlebar: "Race Face Atlas Riser 780mm",
+                    stem: "Race Face Aeffect 50mm",
+                    grips: "ODI Ruffian Lock-On",
+                    brakes: "Shimano MT400 Hydraulic Disc Brakes",
+                    saddle: "WTB Volt Race Saddle",
+                    seatpost: "Race Face Aeffect Dropper 150mm",
+                    seatBinder: "Race Face Cinch System"
+                }
+            },
+            geometry: {
+                frame: "Aluminum, Fully Suspended Frame",
+                fork: "RockShox Recon RL 120mm Travel",
+                shifters: "SRAM NX Eagle Trigger",
+                rearDerailleur: "SRAM NX Eagle 12-speed",
+                frontDerailleur: "None",
+                chainset: "SRAM NX Eagle 12-speed",
+                bottomBracket: "SRAM DUB BSA30",
+                chain: "SRAM NX Eagle",
+                tyres: "Maxxis Minion DHF 27.5x2.3",
+                brakes: "Shimano MT400 Hydraulic Disc Brakes"
+            }
         });
         server.create("bicycle", {
             id: "3",
@@ -88,6 +168,46 @@ createServer({
                 "Its thoughtful design empowers riders to conquer new heights with confidence and ease.",
             imageUrl: mountain3,
             type: "Mountain",
+            specifications: {
+                frameset: {
+                    frame: "Aluminum 6061, Lightweight Frame",
+                    fork: "RockShox Judy 100mm Travel"
+                },
+                wheels: {
+                    rims: "DT Swiss XR 1501 Spline One",
+                    tyres: "Maxxis Ardent 27.5x2.4"
+                },
+                drivetrain: {
+                    crankset: "Shimano Deore XT 12-speed",
+                    shifters: "Shimano Deore XT SLX 12-speed",
+                    frontDerailleur: "Shimano Deore XT",
+                    rearDerailleur: "Shimano Deore XT",
+                    chain: "Shimano Deore XT",
+                    cassette: "Shimano Deore XT 10-51t",
+                    bottomBracket: "Shimano PressFit 30"
+                },
+                components: {
+                    handlebar: "FSA SL-K Carbon Riser 740mm",
+                    stem: "FSA OS-99 60mm",
+                    grips: "Lizard Skins Lock-On Grips",
+                    brakes: "Magura MT5 Hydraulic Disc",
+                    saddle: "WTB Volt Saddle",
+                    seatpost: "RockShox Reverb Stealth Dropper",
+                    seatBinder: "FSA K-Force"
+                }
+            },
+            geometry: {
+                frame: "Aluminum 6061, Lightweight Frame",
+                fork: "RockShox Judy 100mm Travel",
+                shifters: "Shimano Deore XT SLX 12-speed",
+                rearDerailleur: "Shimano Deore XT",
+                frontDerailleur: "Shimano Deore XT",
+                chainset: "Shimano Deore XT 12-speed",
+                bottomBracket: "Shimano PressFit 30",
+                chain: "Shimano Deore XT",
+                tyres: "Maxxis Ardent 27.5x2.4",
+                brakes: "Magura MT5 Hydraulic Disc"
+            }
         });
         server.create("bicycle", {
             id: "4",
@@ -104,6 +224,46 @@ createServer({
                 "This bike is an excellent choice for those who love off-road adventures and tough terrains.",
             imageUrl: mountain4,
             type: "Mountain",
+            specifications: {
+                frameset: {
+                    frame: "Steel, Reinforced for Tough Terrain",
+                    fork: "Marzocchi Bomber Z2 120mm Travel"
+                },
+                wheels: {
+                    rims: "Stan's NoTubes Arch S1",
+                    tyres: "Kenda Nevegal 27.5x2.6"
+                },
+                drivetrain: {
+                    crankset: "SRAM GX Eagle 12-speed",
+                    shifters: "SRAM GX Eagle Trigger",
+                    frontDerailleur: "None",
+                    rearDerailleur: "SRAM GX Eagle",
+                    chain: "SRAM GX Eagle",
+                    cassette: "SRAM XG-1275 10-50t",
+                    bottomBracket: "SRAM GXP"
+                },
+                components: {
+                    handlebar: "Race Face Atlas 35mm Riser",
+                    stem: "Race Face Turbine 35mm",
+                    grips: "Ergon GA2 Fat Grips",
+                    brakes: "Shimano XT M8020 4-Piston",
+                    saddle: "WTB Silverado Ti",
+                    seatpost: "Race Face Aeffect Dropper",
+                    seatBinder: "Race Face Cinch System"
+                }
+            },
+            geometry: {
+                frame: "Steel, Reinforced for Tough Terrain",
+                fork: "Marzocchi Bomber Z2 120mm Travel",
+                shifters: "SRAM GX Eagle Trigger",
+                rearDerailleur: "SRAM GX Eagle",
+                frontDerailleur: "None",
+                chainset: "SRAM GX Eagle 12-speed",
+                bottomBracket: "SRAM GXP",
+                chain: "SRAM GX Eagle",
+                tyres: "Kenda Nevegal 27.5x2.6",
+                brakes: "Shimano XT M8020 4-Piston"
+            }
         });
         server.create("bicycle", {
             id: "5",
@@ -120,6 +280,46 @@ createServer({
                 "This bike is tailored for explorers who demand reliability and performance in all their adventures.",
             imageUrl: mountain5,
             type: "Mountain",
+            specifications: {
+                frameset: {
+                    frame: "Aluminum Alloy Frame",
+                    fork: "RockShox Tora 80mm Travel"
+                },
+                wheels: {
+                    rims: "Sun Ringle Charger Pro 26",
+                    tyres: "Schwalbe Nobby Nic 26x2.25"
+                },
+                drivetrain: {
+                    crankset: "Shimano Alivio 9-speed",
+                    shifters: "Shimano Alivio SL-M4000",
+                    frontDerailleur: "Shimano Alivio",
+                    rearDerailleur: "Shimano Alivio",
+                    chain: "Shimano HG-53",
+                    cassette: "Shimano CS-HG400 11-34t",
+                    bottomBracket: "Shimano BB-UN26"
+                },
+                components: {
+                    handlebar: "FSA V-Drive 660mm",
+                    stem: "Kalloy 90mm",
+                    grips: "Bontrager XR Enduro Grips",
+                    brakes: "Tektro M285 Hydraulic Disc",
+                    saddle: "Bontrager Arvada",
+                    seatpost: "Bontrager Elite 31.6mm",
+                    seatBinder: "Bontrager Alloy"
+                }
+            },
+            geometry: {
+                frame: "Aluminum Alloy Frame",
+                fork: "RockShox Tora 80mm Travel",
+                shifters: "Shimano Alivio SL-M4000",
+                rearDerailleur: "Shimano Alivio",
+                frontDerailleur: "Shimano Alivio",
+                chainset: "Shimano Alivio 9-speed",
+                bottomBracket: "Shimano BB-UN26",
+                chain: "Shimano HG-53",
+                tyres: "Schwalbe Nobby Nic 26x2.25",
+                brakes: "Tektro M285 Hydraulic Disc"
+            }
         });
 
         // Road Bikes
@@ -138,6 +338,46 @@ createServer({
                 "With its combination of efficiency and performance, this bike stands out on any road.",
             imageUrl: road1,
             type: "Road",
+            specifications: {
+                frameset: {
+                    frame: "Aluminum Frame, Lightweight",
+                    fork: "Carbon Fork for Vibration Dampening"
+                },
+                wheels: {
+                    rims: "Fulcrum Racing 5",
+                    tyres: "Continental Grand Prix 700x25"
+                },
+                drivetrain: {
+                    crankset: "Shimano 105 11-speed",
+                    shifters: "Shimano 105 R7000",
+                    frontDerailleur: "Shimano 105 R7000",
+                    rearDerailleur: "Shimano 105 R7000",
+                    chain: "Shimano HG601",
+                    cassette: "Shimano 105 R7000 11-32t",
+                    bottomBracket: "Shimano HollowTech II"
+                },
+                components: {
+                    handlebar: "FSA Omega Compact",
+                    stem: "FSA OS-168 90mm",
+                    grips: "Fizik Superlight",
+                    brakes: "Shimano 105 R7000 Caliper",
+                    saddle: "Fizik Aliante R5",
+                    seatpost: "FSA SL-K Carbon",
+                    seatBinder: "FSA Alloy"
+                }
+            },
+            geometry: {
+                frame: "Aluminum Frame, Lightweight",
+                fork: "Carbon Fork for Vibration Dampening",
+                shifters: "Shimano 105 R7000",
+                rearDerailleur: "Shimano 105 R7000",
+                frontDerailleur: "Shimano 105 R7000",
+                chainset: "Shimano 105 11-speed",
+                bottomBracket: "Shimano HollowTech II",
+                chain: "Shimano HG601",
+                tyres: "Continental Grand Prix 700x25",
+                brakes: "Shimano 105 R7000 Caliper"
+            }
         });
         server.create("bicycle", {
             id: "7",
@@ -154,6 +394,46 @@ createServer({
                 "With its precision engineering and top-tier components, this bike is made to deliver excellence.",
             imageUrl: road2,
             type: "Road",
+            specifications: {
+                frameset: {
+                    frame: "Carbon Fiber Frame, Aerodynamic Design",
+                    fork: "Carbon Fiber Fork"
+                },
+                wheels: {
+                    rims: "DT Swiss R 500",
+                    tyres: "Michelin Pro4 700x23"
+                },
+                drivetrain: {
+                    crankset: "Shimano Ultegra 11-speed",
+                    shifters: "Shimano Ultegra R8000",
+                    frontDerailleur: "Shimano Ultegra",
+                    rearDerailleur: "Shimano Ultegra",
+                    chain: "Shimano Ultegra",
+                    cassette: "Shimano Ultegra 11-28t",
+                    bottomBracket: "Shimano PressFit"
+                },
+                components: {
+                    handlebar: "FSA K-Force Compact",
+                    stem: "FSA SL-K 100mm",
+                    grips: "Lizard Skins DSP 2.5mm",
+                    brakes: "Shimano Ultegra R8000 Caliper",
+                    saddle: "Fizik Antares R5",
+                    seatpost: "FSA SL-K Carbon",
+                    seatBinder: "FSA K-Force"
+                }
+            },
+            geometry: {
+                frame: "Carbon Fiber Frame, Aerodynamic Design",
+                fork: "Carbon Fiber Fork",
+                shifters: "Shimano Ultegra R8000",
+                rearDerailleur: "Shimano Ultegra",
+                frontDerailleur: "Shimano Ultegra",
+                chainset: "Shimano Ultegra 11-speed",
+                bottomBracket: "Shimano PressFit",
+                chain: "Shimano Ultegra",
+                tyres: "Michelin Pro4 700x23",
+                brakes: "Shimano Ultegra R8000 Caliper"
+            }
         });
         server.create("bicycle", {
             id: "8",
@@ -170,6 +450,46 @@ createServer({
                 "With its balance of performance and comfort, it’s a top choice for endurance enthusiasts.",
             imageUrl: road3,
             type: "Road",
+            specifications: {
+                "frameset": {
+                    "frame": "Endurance-Optimized Carbon Frame, Comfort Geometry",
+                    "fork": "Full Carbon Fork, Vibration Dampening"
+                },
+                "wheels": {
+                    "rims": "DT Swiss E 1800",
+                    "tyres": "Continental Grand Prix 5000 700x28c"
+                },
+                "drivetrain": {
+                    "crankset": "Shimano 105 R7000 50/34T",
+                    "shifters": "Shimano 105 R7000",
+                    "frontDerailleur": "Shimano 105 R7000",
+                    "rearDerailleur": "Shimano 105 R7000",
+                    "chain": "Shimano HG601",
+                    "cassette": "Shimano 105 R7000 11-30T",
+                    "bottomBracket": "Shimano PressFit"
+                },
+                "components": {
+                    "handlebar": "FSA Omega Compact",
+                    "stem": "FSA Energy 100mm",
+                    "grips": "Lizard Skins DSP 2.5mm",
+                    "brakes": "Shimano 105 R7000 Hydraulic Disc",
+                    "saddle": "Fizik Tempo Argo R5",
+                    "seatpost": "Carbon Seatpost",
+                    "seatBinder": "Integrated Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "9",
@@ -186,6 +506,46 @@ createServer({
                 "It’s a practical and reliable choice for navigating the urban jungle.",
             imageUrl: road4,
             type: "Road",
+            specifications: {
+                "frameset": {
+                    "frame": "Lightweight Aluminum City Frame",
+                    "fork": "Carbon Fork for Urban Comfort"
+                },
+                "wheels": {
+                    "rims": "AlexRims AT470",
+                    "tyres": "Schwalbe Marathon 700x32c"
+                },
+                "drivetrain": {
+                    "crankset": "Shimano Sora 48/34T",
+                    "shifters": "Shimano Sora R3000",
+                    "frontDerailleur": "Shimano Sora R3000",
+                    "rearDerailleur": "Shimano Sora R3000",
+                    "chain": "KMC X9",
+                    "cassette": "Shimano HG400 11-32T",
+                    "bottomBracket": "Shimano Hollowtech II"
+                },
+                "components": {
+                    "handlebar": "Ergon Urban Flat Bar",
+                    "stem": "Adjustable Alloy Stem",
+                    "grips": "Ergon GP1",
+                    "brakes": "Tektro Hydraulic Disc",
+                    "saddle": "Brooks Cambium C17",
+                    "seatpost": "Alloy Seatpost",
+                    "seatBinder": "Quick-Release Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "10",
@@ -202,6 +562,46 @@ createServer({
                 "Whether you're racing or training, this bike will help you achieve your goals.",
             imageUrl: road5,
             type: "Road",
+            specifications: {
+                "frameset": {
+                    "frame": "Aerodynamic Carbon Race Frame",
+                    "fork": "Full Carbon Aero Fork"
+                },
+                "wheels": {
+                    "rims": "Zipp 303S Carbon",
+                    "tyres": "Pirelli P Zero Race 700x25c"
+                },
+                "drivetrain": {
+                    "crankset": "Shimano Ultegra R8100 52/36T",
+                    "shifters": "Shimano Ultegra Di2 R8170",
+                    "frontDerailleur": "Shimano Ultegra Di2",
+                    "rearDerailleur": "Shimano Ultegra Di2",
+                    "chain": "Shimano HG701",
+                    "cassette": "Shimano Ultegra 11-30T",
+                    "bottomBracket": "Shimano PressFit"
+                },
+                "components": {
+                    "handlebar": "Zipp SL-70 Aero",
+                    "stem": "Zipp Service Course SL",
+                    "grips": "Supacaz Super Sticky Kush",
+                    "brakes": "Shimano Ultegra R8170 Hydraulic Disc",
+                    "saddle": "Fizik Antares R1",
+                    "seatpost": "Aero Carbon Seatpost",
+                    "seatBinder": "Hidden Aero Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
 
         // Electric Bikes
@@ -220,6 +620,46 @@ createServer({
                 "With its innovative features, it’s designed to make cycling more enjoyable and accessible.",
             imageUrl: electric1,
             type: "Electric",
+            specifications: {
+                "frameset": {
+                    "frame": "Aluminum E-Bike Frame with Integrated Battery",
+                    "fork": "Suspension Fork with Lockout"
+                },
+                "wheels": {
+                    "rims": "WTB ST i23",
+                    "tyres": "Schwalbe Smart Sam 700x45c"
+                },
+                "drivetrain": {
+                    "crankset": "Shimano Steps FC-E6100",
+                    "shifters": "Shimano Deore M5100",
+                    "frontDerailleur": "N/A",
+                    "rearDerailleur": "Shimano Deore M5100",
+                    "chain": "Shimano E8000",
+                    "cassette": "Shimano Deore 11-42T",
+                    "bottomBracket": "Integrated Motor System"
+                },
+                "components": {
+                    "handlebar": "Ergon Comfort Bar",
+                    "stem": "Adjustable Alloy Stem",
+                    "grips": "Ergon GP2",
+                    "brakes": "Shimano MT200 Hydraulic Disc",
+                    "saddle": "Selle Royal eZone",
+                    "seatpost": "Alloy Suspension Seatpost",
+                    "seatBinder": "Quick-Release Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "12",
@@ -236,6 +676,46 @@ createServer({
                 "Combining practicality with modern aesthetics, it’s a standout choice for urban cyclists.",
             imageUrl: electric2,
             type: "Electric",
+            specifications: {
+                "frameset": {
+                    "frame": "Urban Aluminum E-Bike Frame",
+                    "fork": "Carbon Fork for Lightweight Handling"
+                },
+                "wheels": {
+                    "rims": "AlexRims ETRTO 622",
+                    "tyres": "Continental Contact Plus 700x35c"
+                },
+                "drivetrain": {
+                    "crankset": "Shimano Steps FC-E5000",
+                    "shifters": "Shimano Nexus Revo",
+                    "frontDerailleur": "N/A",
+                    "rearDerailleur": "Shimano Nexus 8-Speed Internal Hub",
+                    "chain": "KMC E10 Turbo",
+                    "cassette": "Shimano Nexus 20T",
+                    "bottomBracket": "Integrated Motor System"
+                },
+                "components": {
+                    "handlebar": "Flat Urban Handlebar",
+                    "stem": "Adjustable Alloy Stem",
+                    "grips": "Ergon Comfort Grips",
+                    "brakes": "Tektro Hydraulic Disc",
+                    "saddle": "Brooks Cambium C17",
+                    "seatpost": "Alloy Seatpost",
+                    "seatBinder": "Quick-Release Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "13",
@@ -252,6 +732,46 @@ createServer({
                 "This e-bike is perfect for those who want a practical yet stylish mode of transport.",
             imageUrl: electric3,
             type: "Electric",
+            specifications: {
+                "frameset": {
+                    "frame": "Aluminum Kids Bike Frame",
+                    "fork": "Steel Rigid Fork"
+                },
+                "wheels": {
+                    "rims": "Double-Walled Alloy Rims",
+                    "tyres": "Kenda Small Block Eight 20x2.0"
+                },
+                "drivetrain": {
+                    "crankset": "Single-Speed 32T",
+                    "shifters": "N/A",
+                    "frontDerailleur": "N/A",
+                    "rearDerailleur": "N/A",
+                    "chain": "KMC Z410",
+                    "cassette": "18T Freewheel",
+                    "bottomBracket": "Sealed Cartridge"
+                },
+                "components": {
+                    "handlebar": "Kids-Size Riser Bar",
+                    "stem": "Short Alloy Stem",
+                    "grips": "Soft Rubber Grips",
+                    "brakes": "V-Brakes",
+                    "saddle": "Junior Comfort Saddle",
+                    "seatpost": "Steel Seatpost",
+                    "seatBinder": "Quick-Release Clamp"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "14",
@@ -268,6 +788,45 @@ createServer({
                 "It’s a premium choice for cyclists who value both functionality and performance.",
             imageUrl: electric4,
             type: "Electric",
+            specifications: {
+                "frameset": {
+                    "frame": "Aluminum alloy frame with reinforced structure for durability",
+                    "fork": "Suspension fork with lockout for smoother rides on rough terrain"
+                },
+                "wheels": {
+                    "rims": "Double-wall aluminum rims for added strength",
+                    "tyres": "All-terrain tires with puncture resistance"
+                },
+                "drivetrain": {
+                    "motor": "750W brushless hub motor for high torque performance",
+                    "battery": "Lithium-ion 48V, 14Ah battery with extended range",
+                    "shifters": "Shimano 7-speed trigger shifter",
+                    "chain": "Heavy-duty e-bike chain",
+                    "cassette": "Shimano 7-speed freewheel",
+                    "bottomBracket": "Sealed cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Ergonomic riser handlebar for improved control",
+                    "stem": "Adjustable alloy stem for customizable riding position",
+                    "grips": "Shock-absorbing rubber grips for comfort",
+                    "brakes": "Hydraulic disc brakes for reliable stopping power",
+                    "saddle": "Gel-padded saddle for long-ride comfort",
+                    "seatpost": "Alloy seatpost with quick-release adjustment",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "15",
@@ -284,6 +843,45 @@ createServer({
                 "It offers a seamless blend of technology, performance, and sustainability.",
             imageUrl: electric5,
             type: "Electric",
+            specifications: {
+                "frameset": {
+                    "frame": "Lightweight aluminum frame with integrated battery housing",
+                    "fork": "Carbon-blended fork for a smooth, vibration-free ride"
+                },
+                "wheels": {
+                    "rims": "Aero-profile aluminum rims for improved efficiency",
+                    "tyres": "700x38c puncture-resistant tires for urban commuting"
+                },
+                "drivetrain": {
+                    "motor": "500W rear hub motor for efficient speed control",
+                    "battery": "Lithium-ion 36V, 12Ah battery with up to 50-mile range",
+                    "shifters": "Shimano 8-speed rapid-fire shifters",
+                    "chain": "Anti-rust e-bike chain",
+                    "cassette": "Shimano 11-34T, 8-speed",
+                    "bottomBracket": "Sealed cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Flat ergonomic handlebar with integrated controls",
+                    "stem": "Adjustable stem for a customizable riding position",
+                    "grips": "Soft-touch grips for improved comfort",
+                    "brakes": "Hydraulic disc brakes with 180mm rotors",
+                    "saddle": "Memory foam saddle for enhanced rider comfort",
+                    "seatpost": "Suspension seatpost for shock absorption",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "ALX8 6066/6061-T6 DOUBLE-BUTTED ALUMINIUM",
+                fork: "SR SUNTOUR SF19 XCE28 DS 27.5 100 mm",
+                shifters: "Shimano ST-EF41",
+                rearDerailleur: "Shimano RD-TY300",
+                frontDerailleur: "Shimano FD-TZ500 DM6",
+                chainset: "Prowheel TA-CQ68 42 / 34 / 24 170 mm",
+                bottomBracket: "68mm/122.5mm",
+                chain: "KMC HV-500",
+                tyres: "Deli 27.5 x 2.1",
+                brakes: "Alhonga V-Brake"
+            }
         });
 
         // Kids Bikes
@@ -301,6 +899,42 @@ createServer({
                 "Parents can trust this bike to provide a safe and enjoyable experience for their kids.",
             imageUrl: kids1,
             type: "Kids",
+            specifications: {
+                "frameset": {
+                    "frame": "Lightweight steel frame for easy handling",
+                    "fork": "Rigid fork for improved control"
+                },
+                "wheels": {
+                    "rims": "20-inch aluminum rims for durability",
+                    "tyres": "Puncture-resistant kid-friendly tires"
+                },
+                "drivetrain": {
+                    "crankset": "Single-speed drivetrain for simple riding",
+                    "chain": "Rust-resistant steel chain",
+                    "bottomBracket": "Sealed cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "High-rise handlebar for comfortable upright position",
+                    "stem": "Fixed alloy stem for stability",
+                    "grips": "Soft rubber grips for easy handling",
+                    "brakes": "Coaster brakes with hand brake for added safety",
+                    "saddle": "Kid-sized saddle with extra padding",
+                    "seatpost": "Adjustable seatpost with quick release",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "Steel",
+                fork: "Steel",
+                shifters: "N/A",
+                rearDerailleur: "N/A",
+                frontDerailleur: "N/A",
+                chainset: "Steel 40T",
+                bottomBracket: "N/A",
+                chain: "KMC Z51",
+                tyres: "Deli 16 x 2.0",
+                brakes: "V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "17",
@@ -316,6 +950,44 @@ createServer({
                 "Parents will appreciate its durability and safety-focused features.",
             imageUrl: kids2,
             type: "Kids",
+            specifications: {
+                "frameset": {
+                    "frame": "Durable steel frame built for rugged use",
+                    "fork": "Front suspension fork for shock absorption"
+                },
+                "wheels": {
+                    "rims": "24-inch alloy rims for increased strength",
+                    "tyres": "Knobby tires for extra grip on trails"
+                },
+                "drivetrain": {
+                    "crankset": "3-speed drivetrain for varied terrain",
+                    "shifters": "Shimano grip shifter for easy gear changes",
+                    "chain": "Heavy-duty steel chain",
+                    "cassette": "14-28T freewheel",
+                    "bottomBracket": "Sealed cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Flat handlebar for stable control",
+                    "stem": "Forged alloy stem for durability",
+                    "grips": "Soft, slip-resistant grips",
+                    "brakes": "V-brakes for strong stopping power",
+                    "saddle": "Kid-specific padded saddle",
+                    "seatpost": "Adjustable seatpost",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "Steel",
+                fork: "Steel",
+                shifters: "N/A",
+                rearDerailleur: "N/A",
+                frontDerailleur: "N/A",
+                chainset: "Steel 40T",
+                bottomBracket: "N/A",
+                chain: "KMC Z51",
+                tyres: "Deli 20 x 2.1",
+                brakes: "V-Brake"
+            }
         });
         server.create("bicycle", {
             id: "18",
@@ -332,6 +1004,42 @@ createServer({
                 "Parents can trust this bike to provide a safe and enjoyable experience for their children.",
             imageUrl: kids3,
             type: "Kids",
+            specifications: {
+                "frameset": {
+                    "frame": "Aluminum frame for a lightweight ride",
+                    "fork": "Rigid fork for better control"
+                },
+                "wheels": {
+                    "rims": "18-inch alloy rims for durability",
+                    "tyres": "Semi-slick tires for a balance of speed and grip"
+                },
+                "drivetrain": {
+                    "crankset": "Single-speed drivetrain for ease of use",
+                    "chain": "Rust-proof chain",
+                    "bottomBracket": "Cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Rise handlebar for an upright riding position",
+                    "stem": "Alloy stem for stability",
+                    "grips": "Cushioned grips for comfort",
+                    "brakes": "Coaster brake with additional hand brake",
+                    "saddle": "Soft padded saddle for comfort",
+                    "seatpost": "Adjustable alloy seatpost",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "Aluminum frame for a lightweight ride",
+                fork: "Rigid fork for better control",
+                shifters: "N/A",
+                rearDerailleur: "N/A",
+                frontDerailleur: "N/A",
+                chainset: "Single-speed drivetrain for ease of use",
+                bottomBracket: "Cartridge bottom bracket",
+                chain: "Rust-proof chain",
+                tyres: "Semi-slick tires for a balance of speed and grip",
+                brakes: "Coaster brake with additional hand brake"
+            }
         });
         server.create("bicycle", {
             id: "19",
@@ -348,6 +1056,42 @@ createServer({
                 "Parents will appreciate its durability and focus on safety.",
             imageUrl: kids4,
             type: "Kids",
+            specifications: {
+                "frameset": {
+                    "frame": "Lightweight aluminum frame with sport geometry",
+                    "fork": "Rigid fork for better speed control"
+                },
+                "wheels": {
+                    "rims": "20-inch alloy rims for durability",
+                    "tyres": "Smooth-rolling tires for high speed"
+                },
+                "drivetrain": {
+                    "crankset": "Single-speed drivetrain for easy handling",
+                    "chain": "Durable steel chain",
+                    "bottomBracket": "Sealed cartridge bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Flat handlebar for improved maneuverability",
+                    "stem": "Forged alloy stem for added strength",
+                    "grips": "Non-slip ergonomic grips",
+                    "brakes": "V-brakes for reliable stopping",
+                    "saddle": "Slim-profile racing saddle",
+                    "seatpost": "Adjustable seatpost",
+                    "seatBinder": "Quick-release seat binder"
+                }
+            },
+            geometry: {
+                frame: "Lightweight aluminum frame with sport geometry",
+                fork: "Rigid fork for better speed control",
+                shifters: "N/A",
+                rearDerailleur: "N/A",
+                frontDerailleur: "N/A",
+                chainset: "Single-speed drivetrain for easy handling",
+                bottomBracket: "Sealed cartridge bottom bracket",
+                chain: "Durable steel chain",
+                tyres: "Smooth-rolling tires for high speed",
+                brakes: "V-brakes for reliable stopping"
+            }
         });
         server.create("bicycle", {
             id: "20",
@@ -364,59 +1108,96 @@ createServer({
                 "Parents can rely on its safety-focused design and robust construction for peace of mind.",
             imageUrl: kids5,
             type: "Kids",
+            specifications: {
+                "frameset": {
+                    "frame": "Reinforced steel frame for durability",
+                    "fork": "Rigid fork with extra stability"
+                },
+                "wheels": {
+                    "rims": "16-inch alloy rims for lightweight handling",
+                    "tyres": "Extra-wide tires for enhanced balance"
+                },
+                "drivetrain": {
+                    "crankset": "Single-speed drivetrain with protected chain guard",
+                    "chain": "Heavy-duty chain with anti-slip coating",
+                    "bottomBracket": "Maintenance-free bottom bracket"
+                },
+                "components": {
+                    "handlebar": "Wide handlebars for easy control",
+                    "stem": "Fixed alloy stem",
+                    "grips": "Soft, cushioned grips",
+                    "brakes": "Coaster brake with additional front hand brake",
+                    "saddle": "Extra-cushioned saddle for a comfortable ride",
+                    "seatpost": "Adjustable alloy seatpost",
+                    "seatBinder": "Quick-release seat binder",
+                    "extras": "Removable training wheels for balance learning"
+                }
+            },
+            geometry: {
+                frame: "Reinforced steel frame for durability",
+                fork: "Rigid fork with extra stability",
+                shifters: "N/A",
+                rearDerailleur: "N/A",
+                frontDerailleur: "N/A",
+                chainset: "Single-speed drivetrain with protected chain guard",
+                bottomBracket: "Maintenance-free bottom bracket",
+                chain: "Heavy-duty chain with anti-slip coating",
+                tyres: "Extra-wide tires for enhanced balance",
+                brakes: "Coaster brake with additional front hand brake"
+            }
         });
 
-                //Gallery
-                server.create("gallery", {
-                    id: "1",
-                    imageUrl: gallery1,
-                    name:"gallery image 1",
-                });
-                server.create("gallery", {
-                    id: "2",
-                    imageUrl: gallery2,
-                    name:"gallery image 2",
-                });
-                server.create("gallery", {
-                    id: "3",
-                    imageUrl: gallery3,
-                    name:"gallery image 3",
-                });
-                server.create("gallery", {
-                    id: "4",
-                    imageUrl: gallery4,
-                    name:"gallery image 4",
-                });
-                server.create("gallery", {
-                    id: "5",
-                    imageUrl: gallery5,
-                    name:"gallery image 5",
-                });
-                server.create("gallery", {
-                    id: "6",
-                    imageUrl: gallery6,
-                    name:"gallery image 6",
-                });
-                server.create("gallery", {
-                    id: "7",
-                    imageUrl: gallery7,
-                    name:"gallery image 7",
-                });
-                server.create("gallery", {
-                    id: "8",
-                    imageUrl: gallery8,
-                    name:"gallery image 8",
-                });
-                server.create("gallery", {
-                    id: "9",
-                    imageUrl: gallery9,
-                    name:"gallery image 9",
-                });
-                server.create("gallery", {
-                    id: "10",
-                    imageUrl: gallery10,
-                    name:"gallery image 10",
-                });
+        //Gallery
+        server.create("gallery", {
+            id: "1",
+            imageUrl: gallery1,
+            name: "gallery image 1",
+        });
+        server.create("gallery", {
+            id: "2",
+            imageUrl: gallery2,
+            name: "gallery image 2",
+        });
+        server.create("gallery", {
+            id: "3",
+            imageUrl: gallery3,
+            name: "gallery image 3",
+        });
+        server.create("gallery", {
+            id: "4",
+            imageUrl: gallery4,
+            name: "gallery image 4",
+        });
+        server.create("gallery", {
+            id: "5",
+            imageUrl: gallery5,
+            name: "gallery image 5",
+        });
+        server.create("gallery", {
+            id: "6",
+            imageUrl: gallery6,
+            name: "gallery image 6",
+        });
+        server.create("gallery", {
+            id: "7",
+            imageUrl: gallery7,
+            name: "gallery image 7",
+        });
+        server.create("gallery", {
+            id: "8",
+            imageUrl: gallery8,
+            name: "gallery image 8",
+        });
+        server.create("gallery", {
+            id: "9",
+            imageUrl: gallery9,
+            name: "gallery image 9",
+        });
+        server.create("gallery", {
+            id: "10",
+            imageUrl: gallery10,
+            name: "gallery image 10",
+        });
     },
 
     routes() {
@@ -442,7 +1223,7 @@ createServer({
             const id = request.params.id;
             return schema.galleries.find(id);
         });
-       
+
 
     },
 

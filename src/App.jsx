@@ -12,10 +12,10 @@ import BikeInfo from './Pages/Hire Bike/BikeInfo.jsx'
 import Layout from './Components/Layout/Layout.jsx'
 import Gallery from './Pages/Gallery/Gallery.jsx'
 import Reviews from './Pages/Reviews/Reviews.jsx'
-import Intro from './Pages/Hire Bike/Dashboard/Intro.jsx'
-import Specification from './Pages/Hire Bike/Dashboard/Specification.jsx'
-import Geometry from './Pages/Hire Bike/Dashboard/Geometry.jsx'
-import Review from './Pages/Hire Bike/Dashboard/Review.jsx'
+import Intro from './Pages/Hire Bike/Dashboard/Intro/Intro.jsx'
+import Specification from './Pages/Hire Bike/Dashboard/Specification/Specification.jsx'
+import Geometry from './Pages/Hire Bike/Dashboard/Geometry/Geometry.jsx'
+import Review from './Pages/Hire Bike/Dashboard/Review/Review.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">

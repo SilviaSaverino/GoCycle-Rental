@@ -29,6 +29,12 @@
     /* Prevents nested scrollbars */
 }
 
+.outlet-container p {
+    letter-spacing: 1.2px;
+}
+
+
+
 .productInfo h2,
 .productInfo h3 {
     font-size: 1.9rem;
