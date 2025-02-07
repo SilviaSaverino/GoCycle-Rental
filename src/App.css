@@ -33,18 +33,18 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 button {
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: none;
+    padding: 5px 10px !important;
+    border-radius: 15px !important; 
+    border: none !important;
 }
 
 button:hover {
-    background-color: #31B2C5;
-    color: white;
+    background-color: #31B2C5 !important;
+    color: white !important;
 }
 
 strong {
