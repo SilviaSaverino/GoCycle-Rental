@@ -1,17 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useSearchParams } from "react-router-dom";
 import "./Bikes.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare, faCalendarDays, faFilter, faSort } from "@fortawesome/free-solid-svg-icons";
 
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const typeFilter = searchParams.get("type")
 
     React.useEffect(() => {
         fetch("/api/bicycles")
             .then((res) => res.json())
             .then((data) => setBicycles(data.bicycles))
     }, []);
+
+    const filteredBikes = typeFilter 
+    ? 
+    bicycles.filter(bike => bike.type.toLowerCase()===typeFilter)
+    : bicycles
+    console.log(filteredBikes)
 
     const bikes = bicycles.length > 0 ? bicycles.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
@@ -44,6 +53,9 @@ export default function RentBikes() {
             </div>
         </div>
     )) : <p className="loading-bikes">Loading Bikes...</p>
+
+
+  
 
     return (
         <div className="hire-container">
