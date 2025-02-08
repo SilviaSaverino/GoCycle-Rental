@@ -46,7 +46,7 @@ export default function BikeInfo() {
                                         className={({ isActive }) => isActive ? "active-link" : null}>Geometry</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="review"
+                                    <NavLink to="bikereview"
                                         className={({ isActive }) => isActive ? "active-link" : null}>Review</NavLink>
                                 </li>
                             </ul>

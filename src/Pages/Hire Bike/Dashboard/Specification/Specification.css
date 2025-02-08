@@ -25,3 +25,10 @@
     font-size: 1.2em;
 }
 
+.accordion-list {
+    font-size: 0.7em;
+}
+
+.accordion-list span {
+    font-size: 14px;
+}
