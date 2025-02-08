@@ -8,9 +8,10 @@
 }
 
 .bikes-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 bikes per row */
     gap: 20px;
+    width: 100%;
 }
 
 .loading-bikes {
@@ -22,11 +23,11 @@
 
 /* Bikes Info Container */
 .bikesInfo-container {
-    width: 100%;
-    flex: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid #cccccc92;
+    border-radius: 10px;
 }
 
 .bikesInfo-container img {
@@ -40,7 +41,7 @@
     padding: 10px;
 }
 
-/* Availability Container*/
+/* Availability Container */
 .availability {
     display: flex;
     align-items: center;
@@ -86,5 +87,3 @@ button {
     width: 6%;
     display: inline-flex;
 }
-
-
