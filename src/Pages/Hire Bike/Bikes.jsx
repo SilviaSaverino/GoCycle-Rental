@@ -7,7 +7,6 @@ import { faArrowUpRightFromSquare, faCalendarDays, faFilter, faSort } from "@for
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
     const [searchParams, setSearchParams] = useSearchParams()
-
     const typeFilter = searchParams.get("type")
 
     React.useEffect(() => {
@@ -22,7 +21,7 @@ export default function RentBikes() {
     : bicycles
     console.log(filteredBikes)
 
-    const bikes = bicycles.length > 0 ? bicycles.map(bike => (
+    const bikes = bicycles.length > 0 ? filteredBikes.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
             <div className="bikesInfo">
