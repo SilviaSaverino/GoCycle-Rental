@@ -1,8 +1,13 @@
 import React from "react";
-import { Link,useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import "./Bikes.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare, faCalendarDays, faFilter, faSort } from "@fortawesome/free-solid-svg-icons";
+
+import Filter from "../../Components/FilterButton/Filter.jsx";
+import FilterDropdown from "../../Components/FilterButton/FilterDropdown.jsx";
+import FilterButton from "../../Components/FilterButton/FilterButton.jsx";
+import FilterItem from "../../Components/FilterButton/FilterItem.jsx"
 
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
@@ -15,10 +20,10 @@ export default function RentBikes() {
             .then((data) => setBicycles(data.bicycles))
     }, []);
 
-    const filteredBikes = typeFilter 
-    ? 
-    bicycles.filter(bike => bike.type.toLowerCase()===typeFilter)
-    : bicycles
+    const filteredBikes = typeFilter
+        ?
+        bicycles.filter(bike => bike.type.toLowerCase() === typeFilter)
+        : bicycles
     console.log(filteredBikes)
 
     const bikes = bicycles.length > 0 ? filteredBikes.map(bike => (
@@ -53,15 +58,33 @@ export default function RentBikes() {
         </div>
     )) : <p className="loading-bikes">Loading Bikes...</p>
 
+    const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
 
-  
 
     return (
         <div className="hire-container">
             <div className="top-container">
                 <h1>Explore our bikes selection</h1>
-                <button>Filter <FontAwesomeIcon icon={faFilter} className="icon" /></button>
-                <button>Sort <FontAwesomeIcon icon={faSort} className="icon" /></button>
+                <div className="filter-section">
+                    <div className="filter-container">
+                        <Filter>
+                            <FilterButton>Filter</FilterButton >
+                            <FilterDropdown>
+                                {filterDropdownItems.map(items => (
+                                    <FilterItem key={items}>
+                                        {items}
+
+                                    </FilterItem>
+                                ))}
+                            </FilterDropdown>
+                        </Filter>
+                    </div>
+                    <div className="sort-container">
+                    <button className="sort-button">Sort <FontAwesomeIcon icon={faSort} className="icon" /></button>
+                    </div>
+                    
+                </div>
+
             </div>
             <div className="bikes-container">
                 {bikes}
