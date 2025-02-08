@@ -33,21 +33,16 @@
     letter-spacing: 1.2px;
 }
 
-
-
-.productInfo h2,
-.productInfo h3 {
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: #31B2C5;
-}
-
 .productInfo h2 {
     color: #31B2C5;
+    font-size: 1.9rem;
+    font-weight: 600;
 }
 
 .productInfo h3 {
     color: #004882;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .productInfo p {
