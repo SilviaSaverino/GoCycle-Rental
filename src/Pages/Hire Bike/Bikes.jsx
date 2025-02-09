@@ -24,7 +24,7 @@ export default function RentBikes() {
         ?
         bicycles.filter(bike => bike.type.toLowerCase() === typeFilter)
         : bicycles
-    console.log(filteredBikes)
+    // console.log(filteredBikes)
 
     const bikes = bicycles.length > 0 ? filteredBikes.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
@@ -59,7 +59,8 @@ export default function RentBikes() {
     )) : <p className="loading-bikes">Loading Bikes...</p>
 
     const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
-
+    const sortDropdownItems = ["Price", "Availability"]
+    console.log(sortDropdownItems)
 
     return (
         <div className="hire-container">
@@ -80,7 +81,18 @@ export default function RentBikes() {
                         </Filter>
                     </div>
                     <div className="sort-container">
-                    <button className="sort-button">Sort <FontAwesomeIcon icon={faSort} className="icon" /></button>
+                    {/* <button className="sort-button">Sort <FontAwesomeIcon icon={faSort} className="icon" /></button> */}
+                    <Filter>
+                            <FilterButton>Sort</FilterButton >
+                            <FilterDropdown>
+                                {sortDropdownItems.map(items => (
+                                    <FilterItem key={items}>
+                                        {items}
+
+                                    </FilterItem>
+                                ))}
+                            </FilterDropdown>
+                        </Filter>
                     </div>
                     
                 </div>
