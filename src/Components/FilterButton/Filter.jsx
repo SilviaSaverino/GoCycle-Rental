@@ -9,14 +9,19 @@ export default function Filter({ children }) {
     function toggle() {
         setOpen(prevOpen => !prevOpen)
     }
-    
+
     return (
         <>
             <div className="filter">
-                {children}
+                {React.Children.map(children, (child) => {
+                    return React.cloneElement(child, {
+                        open,
+                        toggle
+                    })
+                })}
             </div>
         </>
-    
+
     )
 
 }
