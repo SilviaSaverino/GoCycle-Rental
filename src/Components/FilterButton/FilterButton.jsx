@@ -6,6 +6,6 @@ import { faFilter } from "@fortawesome/free-solid-svg-icons";
 export default function FilterButton({children, toggle}) {
     
     return (
-        <button onClick={toggle}>{children} <FontAwesomeIcon icon={faFilter} className="icon" /></button>
+        <button onClick={toggle}> <h4>{children} </h4><FontAwesomeIcon icon={faFilter} className="icon"/></button>
     )
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./Bikes.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faCalendarDays, faFilter, faSort } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faCalendarDays} from "@fortawesome/free-solid-svg-icons";
 
 import Filter from "../../Components/FilterButton/Filter.jsx";
 import FilterDropdown from "../../Components/FilterButton/FilterDropdown.jsx";
@@ -60,7 +60,6 @@ export default function RentBikes() {
 
     const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
     const sortDropdownItems = ["Price", "Availability"]
-    console.log(sortDropdownItems)
 
     return (
         <div className="hire-container">
@@ -72,29 +71,27 @@ export default function RentBikes() {
                             <FilterButton>Filter</FilterButton >
                             <FilterDropdown>
                                 {filterDropdownItems.map(items => (
-                                    <FilterItem key={items}>
+                                    <FilterItem key={items}
+                                        onClick={() => { setSearchParams({ type: items.toLowerCase() }) }} >
                                         {items}
-
                                     </FilterItem>
                                 ))}
                             </FilterDropdown>
                         </Filter>
                     </div>
                     <div className="sort-container">
-                    {/* <button className="sort-button">Sort <FontAwesomeIcon icon={faSort} className="icon" /></button> */}
-                    <Filter>
+                        <Filter>
                             <FilterButton>Sort</FilterButton >
                             <FilterDropdown>
                                 {sortDropdownItems.map(items => (
                                     <FilterItem key={items}>
                                         {items}
-
                                     </FilterItem>
                                 ))}
                             </FilterDropdown>
                         </Filter>
                     </div>
-                    
+
                 </div>
 
             </div>
