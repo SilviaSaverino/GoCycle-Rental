@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./Bikes.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faCalendarDays} from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
 import Filter from "../../Components/FilterButton/Filter.jsx";
 import FilterDropdown from "../../Components/FilterButton/FilterDropdown.jsx";
@@ -11,10 +11,12 @@ import FilterItem from "../../Components/FilterButton/FilterItem.jsx"
 
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
+    const [filterBtnClicked, setFilterBtnClicked] = React.useState(false)
+
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
-    const availabilityFilter= searchParams.get("available")
-  
+    const availabilityFilter = searchParams.get("available")
+
 
     React.useEffect(() => {
         fetch("/api/bicycles")
@@ -28,12 +30,12 @@ export default function RentBikes() {
         : bicycles
 
     const sortedAvailableBikes = availabilityFilter === "true"
-        ? filteredBikes.filter(bike => bike.available === true) 
+        ? filteredBikes.filter(bike => bike.available === true)
         : filteredBikes;
 
     const displayedBikes = availabilityFilter && sortedAvailableBikes.length > 0
-    ? sortedAvailableBikes
-    : filteredBikes;
+        ? sortedAvailableBikes
+        : filteredBikes;
 
     const bikes = displayedBikes.length > 0 ? displayedBikes.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
@@ -70,6 +72,10 @@ export default function RentBikes() {
     const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
     const sortDropdownItems = ["Availability"]
 
+    function HideFilterSectionButtons() {
+        setFilterBtnClicked(filterBtnClicked => !filterBtnClicked)
+    }
+
     return (
         <div className="hire-container">
             <div className="top-container">
@@ -77,43 +83,47 @@ export default function RentBikes() {
                 <div className="filter-section">
                     <div className="filter-container">
                         <Filter>
-                            <FilterButton>Filter</FilterButton >
+                            <FilterButton hideBtn={HideFilterSectionButtons}>Filter</FilterButton >
                             <FilterDropdown>
                                 {filterDropdownItems.map(items => (
                                     <FilterItem key={items}
-                                        onClick={() => { setSearchParams({ type: items.toLowerCase() }) }} >
-                                        {items}
-                                    </FilterItem>
-                                ))}
-                            </FilterDropdown>
-                        </Filter>
-                    </div>
-                    <div className="sort-container">
-                        <Filter>
-                            <FilterButton>Sort</FilterButton >
-                            <FilterDropdown>
-                                {sortDropdownItems.map(items => (
-                                    <FilterItem key={items}
-                                    onClick={() => {
-                                        const currentParams = new URLSearchParams(searchParams)
-                                        if (currentParams.get("available") === "true") {
-                                            currentParams.delete("available")
-                                        } else {
-                                            currentParams.set("available", "true")
-                                        }
-                                        setSearchParams(currentParams);
-                                    }}  >
-                                        {items}
-                                    </FilterItem>
-                                ))}
-                            </FilterDropdown>
-                        </Filter>
-                    </div>
-                    <div>
-                        <button onClick={() => { setSearchParams({} ) }} >Clear filters</button>
-                    </div>
-                </div>
+                                        onClick={() => { setSearchParams({ type: items.toLowerCase() }) }}>
 
+                                        {items}
+                                    </FilterItem>
+                                ))}
+                            </FilterDropdown>
+                        </Filter>
+                    </div>
+                    {
+                        filterBtnClicked && (
+                            <>
+                                <div className="sort-container">
+                                    <Filter>
+                                        <FilterButton>Sort</FilterButton >
+                                        <FilterDropdown>
+                                            {sortDropdownItems.map(items => (
+                                                <FilterItem key={items}
+                                                    onClick={() => {
+                                                        const currentParams = new URLSearchParams(searchParams)
+                                                        if (currentParams.get("available") === "true") {
+                                                            currentParams.delete("available")
+                                                        } else {
+                                                            currentParams.set("available", "true")
+                                                        }
+                                                        setSearchParams(currentParams);
+                                                    }}  >
+                                                    {items}
+                                                </FilterItem>
+                                            ))}
+                                        </FilterDropdown>
+                                    </Filter>
+                                </div>
+                                <div>
+                                    <button onClick={() => { setSearchParams({}), HideFilterSectionButtons() }} >Clear filters</button>
+                                </div>
+                            </>)}
+                </div>
             </div>
             <div className="bikes-container">
                 {bikes}

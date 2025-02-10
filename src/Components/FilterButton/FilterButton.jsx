@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 
 
-export default function FilterButton({children, toggle}) {
+export default function FilterButton({children, hideBtn}) {
     
     return (
-        <button onClick={toggle}> <h4>{children} </h4><FontAwesomeIcon icon={faFilter} className="icon"/></button>
+        <button onClick={hideBtn}> <h4>{children} </h4><FontAwesomeIcon icon={faFilter} className="icon"/></button>
     )
 }
