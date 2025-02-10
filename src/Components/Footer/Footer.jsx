@@ -5,14 +5,14 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div classNameName="terms">
+                <div className="terms">
                     <p>&#169; 2024 GoCycle Rental. All rights reserved.</p>
                     <p>
                         <a href="#">Terms & Conditions</a> |
                         <a href="#"> Privacy Policy</a>
                     </p>
                 </div>
-                <div classNameName="contact-footer">
+                <div className="contact-footer">
                     <p>
                         Contact us:</p>
                     <p>

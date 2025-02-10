@@ -13,6 +13,7 @@ export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
+    const availabilityFilter= searchParams.get("available")
 
     React.useEffect(() => {
         fetch("/api/bicycles")
@@ -24,9 +25,16 @@ export default function RentBikes() {
         ?
         bicycles.filter(bike => bike.type.toLowerCase() === typeFilter)
         : bicycles
-    // console.log(filteredBikes)
 
-    const bikes = bicycles.length > 0 ? filteredBikes.map(bike => (
+    const sortedAvailableBikes = availabilityFilter === "true"
+        ? filteredBikes.filter(bike => bike.available === true) 
+        : filteredBikes;
+
+    const displayedBikes = availabilityFilter && sortedAvailableBikes.length > 0
+    ? sortedAvailableBikes
+    : filteredBikes;
+
+    const bikes = displayedBikes.length > 0 ? displayedBikes.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
             <img src={bike.imageUrl} alt={bike.name} />
             <div className="bikesInfo">
@@ -59,7 +67,7 @@ export default function RentBikes() {
     )) : <p className="loading-bikes">Loading Bikes...</p>
 
     const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
-    const sortDropdownItems = ["Price", "Availability"]
+    const sortDropdownItems = ["Availability"]
 
     return (
         <div className="hire-container">
@@ -84,7 +92,16 @@ export default function RentBikes() {
                             <FilterButton>Sort</FilterButton >
                             <FilterDropdown>
                                 {sortDropdownItems.map(items => (
-                                    <FilterItem key={items}>
+                                    <FilterItem key={items}
+                                    onClick={() => {
+                                        const currentParams = new URLSearchParams(searchParams)
+                                        if (currentParams.get("available") === "true") {
+                                            currentParams.delete("available")
+                                        } else {
+                                            currentParams.set("available", "true")
+                                        }
+                                        setSearchParams(currentParams);
+                                    }}  >
                                         {items}
                                     </FilterItem>
                                 ))}
