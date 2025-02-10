@@ -14,6 +14,7 @@ export default function RentBikes() {
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
     const availabilityFilter= searchParams.get("available")
+  
 
     React.useEffect(() => {
         fetch("/api/bicycles")
@@ -108,7 +109,9 @@ export default function RentBikes() {
                             </FilterDropdown>
                         </Filter>
                     </div>
-
+                    <div>
+                        <button onClick={() => { setSearchParams({} ) }} >Clear filters</button>
+                    </div>
                 </div>
 
             </div>
