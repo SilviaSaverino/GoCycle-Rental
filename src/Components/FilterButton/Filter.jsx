@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import FilterDropdown from "./FilterDropdown"
-import FilterButton from "./FilterButton"
 
 export default function Filter({ children }) {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
 
 
     function toggle() {
