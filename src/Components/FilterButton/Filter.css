@@ -1,17 +1,16 @@
 .filter-section {
     display: flex;
-    gap: 10px;
 }
 
 .filter-container,
 .sort-container {
     position: relative;
-    width: 6%;
+    width: 8%;
 }
 
 .filter-container button,
 .sort-container button {
-    width: 100%;
+    width: 70%;
 }
 
 .filter-dropdown {
@@ -29,6 +28,7 @@
 .filter-item {
     padding: 5px;
     cursor: pointer;
+    width: fit-content;
 }
 
 .filter-item:hover {
