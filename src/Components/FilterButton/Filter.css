@@ -28,7 +28,6 @@
 .filter-item {
     padding: 5px;
     cursor: pointer;
-    width: fit-content;
 }
 
 .filter-item:hover {
@@ -43,3 +42,20 @@
 .hidden {
     display: none;
 }
+
+.active-filters, .filter-tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.delete-params-btn {
+ padding: 0;   
+}
+
+.strike-on-hover:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+

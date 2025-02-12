@@ -126,13 +126,40 @@ export default function RentBikes() {
                             </FilterDropdown>
                         </Filter>
                     </div>
-                    <div className={` ${open ? "visible" : "hidden"}`}>
-                        <button onClick={() => {
-                            setSearchParams({})
-                            setOpen(false)
-                        }}>Clear filters</button>
-                    </div>
+                    
+                    {(typeFilter || availabilityFilter) ? (
+                        <div className="active-filters">
+                            <span>
+                                Active filters:
+                            </span>
 
+
+                            {typeFilter && (
+                                <div className="filter-tag small">
+                                    <p className="strike-on-hover" onClick={() => {
+                                        const currentParams = new URLSearchParams(searchParams);
+                                        currentParams.delete("type");
+                                        setSearchParams(currentParams);
+                                    }}> <strong>Bike type:</strong>  {typeFilter.charAt(0).toUpperCase() + typeFilter.slice(1)} </p>
+                                </div>
+                            )}
+
+                            {availabilityFilter && (
+                                <div className="filter-tag small">
+                                    <p className="strike-on-hover" onClick={() => {
+                                        const currentParams = new URLSearchParams(searchParams);
+                                        currentParams.delete("available");
+                                        setSearchParams(currentParams);
+                                    }}> <strong>Sorted by:</strong>  {availabilityFilter === "true" ? "Available" : "Not Available"}
+
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <div className="active-filters">
+                            <span>No Active filters</span>
+                        </div>)}
                 </div>
             </div>
             <div className="bikes-container">
