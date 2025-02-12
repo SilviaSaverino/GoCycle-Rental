@@ -55,7 +55,34 @@
 }
 
 .strike-on-hover:hover {
-    text-decoration: line-through;
+    text-decoration:2px red line-through;
     cursor: pointer;
+}
+
+.removeFilterPopup-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.removeFilterPopup-box {
+    visibility: hidden;
+    background-color: #004882;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.removeFilterPopup-container:hover .removeFilterPopup-box {
+    visibility: visible;
+    opacity: 1;
 }
 

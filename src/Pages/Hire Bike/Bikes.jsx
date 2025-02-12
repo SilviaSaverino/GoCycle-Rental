@@ -11,12 +11,11 @@ import FilterItem from "../../Components/FilterButton/FilterItem.jsx"
 
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
-
+    const [showRemoveFilterPopup, setShowRemoveFilterPopup] = React.useState(false)
 
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
     const availabilityFilter = searchParams.get("available")
-
 
     React.useEffect(() => {
         fetch("/api/bicycles")
@@ -126,7 +125,7 @@ export default function RentBikes() {
                             </FilterDropdown>
                         </Filter>
                     </div>
-                    
+
                     {(typeFilter || availabilityFilter) ? (
                         <div className="active-filters">
                             <span>
@@ -135,24 +134,38 @@ export default function RentBikes() {
 
 
                             {typeFilter && (
-                                <div className="filter-tag small">
-                                    <p className="strike-on-hover" onClick={() => {
-                                        const currentParams = new URLSearchParams(searchParams);
-                                        currentParams.delete("type");
-                                        setSearchParams(currentParams);
-                                    }}> <strong>Bike type:</strong>  {typeFilter.charAt(0).toUpperCase() + typeFilter.slice(1)} </p>
+                                <div
+                                    className="removeFilterPopup-container"
+                                    onMouseEnter={() => setShowRemoveFilterPopup(true)}
+                                    onMouseLeave={() => setShowRemoveFilterPopup(false)}
+                                >
+                                    <div className="filter-tag small">
+                                        <p className="strike-on-hover" onClick={() => {
+                                            const currentParams = new URLSearchParams(searchParams);
+                                            currentParams.delete("type");
+                                            setSearchParams(currentParams);
+                                        }}> <strong>Bike type:</strong>  {typeFilter.charAt(0).toUpperCase() + typeFilter.slice(1)} </p>
+                                    </div>
+                                    {showRemoveFilterPopup && <p className="removeFilterPopup-box small">Remove filter</p>}
                                 </div>
                             )}
 
                             {availabilityFilter && (
-                                <div className="filter-tag small">
-                                    <p className="strike-on-hover" onClick={() => {
-                                        const currentParams = new URLSearchParams(searchParams);
-                                        currentParams.delete("available");
-                                        setSearchParams(currentParams);
-                                    }}> <strong>Sorted by:</strong>  {availabilityFilter === "true" ? "Available" : "Not Available"}
-
-                                    </p>
+                                <div
+                                    className="removeFilterPopup-container"
+                                    onMouseEnter={() => setShowRemoveFilterPopup(true)}
+                                    onMouseLeave={() => setShowRemoveFilterPopup(false)}
+                                >
+                                    <div className="filter-tag small">
+                                        <p className="strike-on-hover" onClick={() => {
+                                            const currentParams = new URLSearchParams(searchParams);
+                                            currentParams.delete("available");
+                                            setSearchParams(currentParams);
+                                        }}> <strong>Sorted by:</strong>  {availabilityFilter === "true" ? "Available" : "Not Available"}
+                                            
+                                        </p>
+                                    </div>
+                                    {showRemoveFilterPopup && <p className="removeFilterPopup-box small">Remove filter</p>}
                                 </div>
                             )}
                         </div>
