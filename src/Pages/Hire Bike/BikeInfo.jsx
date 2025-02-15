@@ -22,15 +22,24 @@ export default function BikeInfo() {
     const location = useLocation()
     console.log(location)
 
-    const search = location.state && location.state.search || ""
+    const search = (location.state && location.state.search) || ""
+
+    const filtered = location.state.type ? location.state.type : ""
+    const sorted = (location.state && location.state.sort == null)
+    ? ""
+    : location.state.sort === "true"
+        ? "Available"
+        : "Not Available";
+
 
     return (
         <>
             <div className="info-container">
                 <div className="back-link">
                     <Link
-                        to= {`../HireBike/${search}`}
-                    > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
+                        to={`../HireBike/${search}`}
+                    >
+                        <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> {`Back to ${sorted} ${filtered.charAt(0).toUpperCase() + filtered.slice(1)}`} bikes</p></Link>
                 </div>
                 <div className="productInfo-container">
                     <div className="productInfo">
@@ -59,13 +68,13 @@ export default function BikeInfo() {
                         <div className="outlet-container">
                             <Outlet context={{ selectedBike }} />
                         </div>
-                       
-                            {selectedBike.available ?
-                                <button className="intro_btn">Rent Now</button>
-                                :
-                                <button className="intro_btn">Check Next Availability</button>
-                            }
-                        
+
+                        {selectedBike.available ?
+                            <button className="intro_btn">Rent Now</button>
+                            :
+                            <button className="intro_btn">Check Next Availability</button>
+                        }
+
                     </div>
                     <div className="productImage-container">
                         <img
@@ -84,5 +93,5 @@ export default function BikeInfo() {
                 {/* <BikeAvailability /> */}
             </div>
         </>
-    );
+    )
 }
