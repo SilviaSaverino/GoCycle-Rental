@@ -87,6 +87,7 @@
 .back-link {
     display: inline-block;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
 }
 
 

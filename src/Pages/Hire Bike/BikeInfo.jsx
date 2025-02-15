@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link, Outlet, NavLink } from "react-router-dom"
+import { useParams, Link, Outlet, NavLink, useLocation } from "react-router-dom"
 import "./BikeInfo.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
@@ -19,12 +19,17 @@ export default function BikeInfo() {
         return <div className="loading"><h2>Loading bike information...</h2></div>;
     }
 
+    const location = useLocation()
+    console.log(location)
+
+    const search = location.state && location.state.search || ""
+
     return (
         <>
             <div className="info-container">
                 <div className="back-link">
                     <Link
-                        to="../HireBike/"
+                        to= {`../HireBike/${search}`}
                     > <p><FontAwesomeIcon icon={faCircleLeft} className="icon" /> Back to all bikes</p></Link>
                 </div>
                 <div className="productInfo-container">

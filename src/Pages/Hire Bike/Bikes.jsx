@@ -46,7 +46,9 @@ export default function RentBikes() {
                     {bike.available ? (
                         <>
                             <span className="available">Available</span>
-                            <Link to={`/bikeinfo/${bike.id}`}>
+                            <Link
+                                to={`/bikeinfo/${bike.id}`}
+                                state={{ search: `?${searchParams.toString()}`, type: typeFilter, sort: availabilityFilter }}>
                                 <button className="bikesInfo-btn">
                                     Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" />
                                 </button>
@@ -55,7 +57,9 @@ export default function RentBikes() {
                     ) : (
                         <>
                             <span className="not-available">Not Available</span>
-                            <Link to={`/bikeinfo/${bike.id}`}>
+                            <Link
+                                to={`/bikeinfo/${bike.id}`}
+                                state={{ search: `?${searchParams.toString()}`, type: typeFilter, sort: availabilityFilter }}>
                                 <button className="bikesInfo-btn">
                                     Check Availability <FontAwesomeIcon icon={faCalendarDays} className="icon" />
                                 </button>
@@ -141,9 +145,9 @@ export default function RentBikes() {
                                 >
                                     <div className="filter-tag small">
                                         <p className="strike-on-hover" onClick={() => {
-                                            const currentParams = new URLSearchParams(searchParams);
-                                            currentParams.delete("type");
-                                            setSearchParams(currentParams);
+                                            const currentParams = new URLSearchParams(searchParams)
+                                            currentParams.delete("type")
+                                            setSearchParams(currentParams)
                                         }}> <strong>Bike type:</strong>  {typeFilter.charAt(0).toUpperCase() + typeFilter.slice(1)} </p>
                                     </div>
                                     {showRemoveFilterPopup && <p className="removeFilterPopup-box small">Remove filter</p>}
@@ -158,11 +162,11 @@ export default function RentBikes() {
                                 >
                                     <div className="filter-tag small">
                                         <p className="strike-on-hover" onClick={() => {
-                                            const currentParams = new URLSearchParams(searchParams);
-                                            currentParams.delete("available");
-                                            setSearchParams(currentParams);
+                                            const currentParams = new URLSearchParams(searchParams)
+                                            currentParams.delete("available")
+                                            setSearchParams(currentParams)
                                         }}> <strong>Sorted by:</strong>  {availabilityFilter === "true" ? "Available" : "Not Available"}
-                                            
+
                                         </p>
                                     </div>
                                     {showRemoveFilterPopup && <p className="removeFilterPopup-box small">Remove filter</p>}
