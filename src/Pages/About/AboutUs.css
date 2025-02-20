@@ -38,6 +38,7 @@
 .about-middle-section img {
  margin: 0 auto;
  display: block;
+ width: 40%;
 }
 
 .about-middle-section li {
@@ -46,7 +47,6 @@
 
 .about-bottom-section {
     display: flex;
-    align-items: center; 
 }
 
 .about-mission, .about-vision {
@@ -56,5 +56,5 @@
 .about-mission img, .about-vision img {
     margin: 0 auto;
     display: block;
-    width: 70%;
+    width: 40%;
 }
