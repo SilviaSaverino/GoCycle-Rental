@@ -20,16 +20,16 @@ export default function BikeInfo() {
     }
 
     const location = useLocation()
-    console.log(location)
+
 
     const search = (location.state && location.state.search) || ""
 
     const filtered = location.state.type ? location.state.type : ""
     const sorted = (location.state && location.state.sort == null)
-    ? ""
-    : location.state.sort === "true"
-        ? "Available"
-        : "Not Available";
+        ? ""
+        : location.state.sort === "true"
+            ? "Available"
+            : "Not Available";
 
 
     return (
@@ -49,19 +49,23 @@ export default function BikeInfo() {
                                 <li>
                                     <NavLink to="."
                                         end
-                                        className={({ isActive }) => isActive ? "active-link" : null}>Intro</NavLink>
+                                        state={location.state}
+                                        className={({ isActive }) => isActive ? "active-link" : ""}>Intro</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="specification"
-                                        className={({ isActive }) => isActive ? "active-link" : null}>Specification</NavLink>
+                                        state={location.state}
+                                        className={({ isActive }) => isActive ? "active-link" : ""}>Specification</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="geometry"
-                                        className={({ isActive }) => isActive ? "active-link" : null}>Geometry</NavLink>
+                                        state={location.state}
+                                        className={({ isActive }) => isActive ? "active-link" : ""}>Geometry</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="bikereview"
-                                        className={({ isActive }) => isActive ? "active-link" : null}>Review</NavLink>
+                                        state={location.state}
+                                        className={({ isActive }) => isActive ? "active-link" : ""}>Review</NavLink>
                                 </li>
                             </ul>
                         </nav>
