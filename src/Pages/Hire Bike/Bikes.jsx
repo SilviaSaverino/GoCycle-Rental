@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom"
 import "./Bikes.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUpRightFromSquare, faCalendarDays } from "@fortawesome/free-solid-svg-icons"
-import { getBicycles } from "../../../api.js"
+import { getBicycles } from "../../../apiBikes.js"
 
 import Filter from "../../Components/FilterButton/Filter.jsx"
 import FilterDropdown from "../../Components/FilterButton/FilterDropdown.jsx"
