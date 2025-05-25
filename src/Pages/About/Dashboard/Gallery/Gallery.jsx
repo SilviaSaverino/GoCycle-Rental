@@ -1,15 +1,18 @@
 import React from "react"
 import "./Gallery.css"
-import {getGalleryImages} from "../../../../../apiGallery.js"
+import { getGalleryImages } from "../../../../../apiGallery.js"
 
 export default function Gallery() {
     const divCount = 10
     const [galleryImg, setGalleryImg] = React.useState([])
+    const [loadingGalleryImg, setLoadingGalleryImg] = React.useState(false)
 
     React.useEffect(() => {
         async function fetchGalleryImages() {
+            setLoadingGalleryImg(true)
             const data = await getGalleryImages()
             setGalleryImg(data)
+            setLoadingGalleryImg(false)
         }
         fetchGalleryImages()
     }, [])
@@ -17,9 +20,14 @@ export default function Gallery() {
     const gallery = galleryImg.map(gallery => (
         <img src={gallery.imageUrl} alt={gallery.name} />
     ))
+
+    if (loadingGalleryImg) {
+        return <p className="loadingMessage">Loading gallery...</p>;
+    }
+
     return (
         <>
-            {galleryImg.length > 0 ? (
+            {galleryImg.length > 0 && (
                 <>
                     {/* - galleryImg.slice(0, divCount) takes the first 10 images from galleryImg 
             (if there are that many) and returns a new array containing just those images.
@@ -40,8 +48,6 @@ export default function Gallery() {
                     </div>
                     <button className="gallery-btn">Load more...</button>
                 </>
-            ) : (
-                <p className="loading-gallery">Loading...</p>
             )}
         </>
 
