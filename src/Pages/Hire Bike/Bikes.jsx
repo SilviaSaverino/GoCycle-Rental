@@ -3,11 +3,13 @@ import { Link, useSearchParams } from "react-router-dom"
 import "./Bikes.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUpRightFromSquare, faCalendarDays } from "@fortawesome/free-solid-svg-icons"
+import { getBicycles } from "../../../api.js"
 
 import Filter from "../../Components/FilterButton/Filter.jsx"
 import FilterDropdown from "../../Components/FilterButton/FilterDropdown.jsx"
 import FilterButton from "../../Components/FilterButton/FilterButton.jsx"
 import FilterItem from "../../Components/FilterButton/FilterItem.jsx"
+
 
 export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
@@ -18,9 +20,11 @@ export default function RentBikes() {
     const availabilityFilter = searchParams.get("available")
 
     React.useEffect(() => {
-        fetch("/api/bicycles")
-            .then((res) => res.json())
-            .then((data) => setBicycles(data.bicycles))
+        async function fetchBicycles() {
+            const data = await getBicycles()
+            setBicycles(data)
+        }
+        fetchBicycles()
     }, [])
 
     const filteredBikes = (bike) => {
