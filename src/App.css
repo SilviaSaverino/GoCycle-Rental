@@ -118,7 +118,7 @@ nav li a:hover, .active-link {
     font-size: 14px;
 }
 
-.loadingMessage{
+.loadingMessage, .errorMessage{
     font-size: 1.6em;
     color: #004882;
     font-weight: bold;
@@ -126,4 +126,12 @@ nav li a:hover, .active-link {
     justify-content:  center;
     align-items: center;
     margin: 30px;
+}
+
+.errorMessage {
+    font-size: 1.3em;
+}
+
+.error {
+    color: red;
 }

@@ -6,13 +6,20 @@ export default function Gallery() {
     const divCount = 10
     const [galleryImg, setGalleryImg] = React.useState([])
     const [loadingGalleryImg, setLoadingGalleryImg] = React.useState(false)
+    const [galleryErr, setGalleryErr] = React.useState(null)
 
     React.useEffect(() => {
         async function fetchGalleryImages() {
             setLoadingGalleryImg(true)
-            const data = await getGalleryImages()
-            setGalleryImg(data)
-            setLoadingGalleryImg(false)
+            try {
+                const data = await getGalleryImages()
+                setGalleryImg(data)
+            }
+            catch (error) {
+                setGalleryErr(error)
+            } finally {
+                setLoadingGalleryImg(false)
+            }
         }
         fetchGalleryImages()
     }, [])
@@ -23,6 +30,10 @@ export default function Gallery() {
 
     if (loadingGalleryImg) {
         return <p className="loadingMessage">Loading gallery...</p>;
+    }
+
+    if (galleryErr) {
+        return <p className="errorMessage">Error loading gallery:<span className="error">{galleryErr.message}</span> </p>;
     }
 
     return (

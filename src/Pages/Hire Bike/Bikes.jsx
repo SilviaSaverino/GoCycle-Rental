@@ -15,6 +15,7 @@ export default function RentBikes() {
     const [bicycles, setBicycles] = React.useState([])
     const [showRemoveFilterPopup, setShowRemoveFilterPopup] = React.useState(false)
     const [loadingBikes, setLoadingBikes] = React.useState(false)
+    const [error, setError] = React.useState(null)
 
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
@@ -23,9 +24,14 @@ export default function RentBikes() {
     React.useEffect(() => {
         async function fetchBicycles() {
             setLoadingBikes(true)
-            const data = await getBicycles()
-            setBicycles(data)
-            setLoadingBikes(false)
+            try {
+                const data = await getBicycles()
+                setBicycles(data)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoadingBikes(false)
+            }
         }
         fetchBicycles()
     }, [])
@@ -43,8 +49,12 @@ export default function RentBikes() {
     })
 
     if (loadingBikes) {
-        return <p className="loadingMessage">Loading bikes...</p>;
-      }
+        return <p className="loadingMessage">Loading bikes...</p>
+    }
+
+    if (error) {
+        return <p className="errorMessage">Error: <span className="error">{error.message}</span></p>
+    }
 
     const bikes = displayedBikes.length > 0 && displayedBikes.map(bike => (
         <div key={bike.id} className="bikesInfo-container">
@@ -80,7 +90,7 @@ export default function RentBikes() {
                 </div>
             </div>
         </div>
-    )) 
+    ))
 
     const filterDropdownItems = ["Mountain", "Road", "Electric", "Kids"]
     const sortDropdownItems = ["Available", "Not Available"]
