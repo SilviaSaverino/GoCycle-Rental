@@ -5,7 +5,7 @@ import "./Login.css"
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const location = useLocation()
-    console.log(location)
+    // console.log(location)
 
     function handleSubmit(e) {
         e.preventDefault()

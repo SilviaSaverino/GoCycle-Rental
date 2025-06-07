@@ -1198,6 +1198,14 @@ createServer({
             imageUrl: gallery10,
             name: "gallery image 10",
         });
+
+        // Test User
+        server.create("user", {
+            id:"123", 
+            email: "testuser@gmail.com",
+            password: "testpassword",
+            firstName: "TestUserName"}
+        );
     },
 
     routes() {

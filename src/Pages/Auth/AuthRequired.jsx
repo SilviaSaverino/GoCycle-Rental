@@ -8,7 +8,7 @@ export default function AuthRequired() {
         return (
         <Navigate 
         to="/Login"
-        state={{message:"Please log in to access this feature."}}/>
+        state={{message:"Please, log in to access this feature."}}/>
         )
     }
     return <Outlet />
