@@ -10,6 +10,7 @@ export default function Login() {
 
     const location = useLocation()
     // console.log(location)
+    const navigate = useNavigate()
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -18,6 +19,7 @@ export default function Login() {
             .then(data => {
                 console.log(data)
                 setUserErr(null)
+                navigate("/hirebike")
             })
             .catch(err => {
                 setUserErr(err)
