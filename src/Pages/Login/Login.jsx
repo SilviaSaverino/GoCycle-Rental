@@ -13,11 +13,12 @@ export default function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        setStatus("Submitting...")
+        setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
                 console.log(data)
-            setUserErr(null)})
+                setUserErr(null)
+            })
             .catch(err => {
                 setUserErr(err)
             }).finally(() => {
@@ -41,7 +42,7 @@ export default function Login() {
                 <h1>{location.state.message}</h1>
                 :
                 <h1>Log in to your account</h1>}
-                 
+
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
@@ -57,7 +58,14 @@ export default function Login() {
                     placeholder="Password"
                     value={loginFormData.password}
                 />
-                <button>Log in</button>
+                 <button 
+                    disabled={status === "submitting"}
+                >
+                    {status === "submitting" 
+                        ? "Logging in..." 
+                        : "Log in"
+                    }
+                </button>
             </form>
             {
                 userErr?.message &&
