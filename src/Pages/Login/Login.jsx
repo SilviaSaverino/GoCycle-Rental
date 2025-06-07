@@ -4,12 +4,29 @@ import "./Login.css"
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
+    const [isLoggedIn, setIsLoggedIn] = React.useState(false)
+    const [userErr, setUserErr] = React.useState(null)
+
     const location = useLocation()
     // console.log(location)
 
+    React.useEffect(() => {
+        async function checkLoginStatus() {
+            try {
+                const data = await loginUser(creds)
+                setLoginFormData(data)
+            }catch (error) {
+                setUserErr(error)
+            }finally{
+                setIsLoggedIn(true)
+            }
+        }
+            checkLoginStatus()
+    },[])
+
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(loginFormData)
+        console.log("user logged with success",loginFormData)
     }
 
     function handleChange(e) {

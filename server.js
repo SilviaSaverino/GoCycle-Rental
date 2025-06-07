@@ -37,6 +37,7 @@ createServer({
     models: {
         bicycles: Model,
         galleries: Model,
+        user: Model,
     },
 
     seeds(server) {
@@ -1204,7 +1205,7 @@ createServer({
             id:"123", 
             email: "testuser@gmail.com",
             password: "testpassword",
-            firstName: "TestUserName"}
+            name: "TestUserName"}
         );
     },
 
@@ -1235,6 +1236,7 @@ createServer({
             return schema.galleries.find(id);
         });
 
+        // User Login
         this.post("/login", (schema, request) => {
             const { email, password } = JSON.parse(request.requestBody)
            
@@ -1245,7 +1247,7 @@ createServer({
 
             //Removes the password from the user object before returning it for security reasons.
             foundUser.password = undefined
-            
+
             return {
                 user: foundUser,
                 token: "Enjoy your ride, here's your tokens."
