@@ -1235,6 +1235,22 @@ createServer({
             return schema.galleries.find(id);
         });
 
+        this.post("/login", (schema, request) => {
+            const { email, password } = JSON.parse(request.requestBody)
+           
+            const foundUser = schema.users.findBy({ email, password })
+            if (!foundUser) {
+                return new Response(401, {}, { message: "No user with those credentials found!" })
+            }
+
+            //Removes the password from the user object before returning it for security reasons.
+            foundUser.password = undefined
+            
+            return {
+                user: foundUser,
+                token: "Enjoy your ride, here's your tokens."
+            }
+        })
 
     },
 
