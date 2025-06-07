@@ -38,7 +38,7 @@ function Navbar() {
               className={({ isActive }) => isActive ? "active-link" : null}>Hire Bike</NavLink>
           </li>
           <li className="login-link">
-            <NavLink to="Login/">
+            <NavLink to="Login/" title='Login to your account'>
               <img className="login-icon" src={loginIcon} alt="Login Icon" /></NavLink>
           </li>
         </ul>
