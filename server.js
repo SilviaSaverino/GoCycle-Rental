@@ -1207,8 +1207,8 @@ createServer({
         this.timing = 1000
         
         this.get("/bicycles", (schema, request) => {
-            return new Response(400, {}, {error: "Error fetching bikes data"})
-            // return schema.bicycles.all();
+            // return new Response(400, {}, {error: "Error fetching bikes data"})
+            return schema.bicycles.all();
         });
 
         this.get("/bicycles/:id", (schema, request) => {
@@ -1218,8 +1218,8 @@ createServer({
 
         // Gallery
         this.get("/galleries", (schema, request) => {
-            return new Response(400, {}, {error: "Error fetching gallery data"})
-            // return schema.galleries.all();
+            // return new Response(400, {}, {error: "Error fetching gallery data"})
+            return schema.galleries.all();
         });
 
         this.get("/galleries/:id", (schema, request) => {
