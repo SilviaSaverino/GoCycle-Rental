@@ -135,20 +135,29 @@ nav li:not(.login-link) .active-link {
     font-size: 14px;
 }
 
-.loadingMessage, .errorMessage{
-    font-size: 1.6em;
+
+.loadingMessage, .errorMessage, .loginError{
     color: #004882;
     font-weight: bold;
+    margin: 30px;
+}
+
+.loadingMessage, .errorMessage{
+    font-size: 1.6em;
     display: flex;
     justify-content:  center;
     align-items: center;
-    margin: 30px;
+}
+
+.loginError {
+    text-align: center;
+    font-size: 1.4em;
 }
 
 .errorMessage {
     font-size: 1.3em;
 }
 
-.error {
+.error  {
     color: red;
 }

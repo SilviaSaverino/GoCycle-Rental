@@ -1,32 +1,28 @@
 import React from "react"
 import { useNavigate, useLocation } from "react-router-dom"
+import { loginUser } from "../../../apiTestUser"
 import "./Login.css"
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
-    const [isLoggedIn, setIsLoggedIn] = React.useState(false)
+    const [status, setStatus] = React.useState("idle")
     const [userErr, setUserErr] = React.useState(null)
 
     const location = useLocation()
     // console.log(location)
 
-    React.useEffect(() => {
-        async function checkLoginStatus() {
-            try {
-                const data = await loginUser(creds)
-                setLoginFormData(data)
-            }catch (error) {
-                setUserErr(error)
-            }finally{
-                setIsLoggedIn(true)
-            }
-        }
-            checkLoginStatus()
-    },[])
-
     function handleSubmit(e) {
         e.preventDefault()
-        console.log("user logged with success",loginFormData)
+        setStatus("Submitting...")
+        loginUser(loginFormData)
+            .then(data => {
+                console.log(data)
+            setUserErr(null)})
+            .catch(err => {
+                setUserErr(err)
+            }).finally(() => {
+                setStatus("idle")
+            })
     }
 
     function handleChange(e) {
@@ -37,12 +33,15 @@ export default function Login() {
         }))
     }
 
+
+
     return (
         <div className="login-container">
-            {location.state  ?
-            <h1>{location.state.message }</h1>
-            :
-            <h1>Log in to your account</h1>}
+            {location.state ?
+                <h1>{location.state.message}</h1>
+                :
+                <h1>Log in to your account</h1>}
+                 
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
@@ -60,6 +59,10 @@ export default function Login() {
                 />
                 <button>Log in</button>
             </form>
+            {
+                userErr?.message &&
+                <p className="loginError">Ops! Something went wrong: <br /> <span className="error">{userErr.message}</span></p>
+            }
             <p className="create-account">Don't have an account? <a href="#">Create one now</a></p>
         </div>
     )
