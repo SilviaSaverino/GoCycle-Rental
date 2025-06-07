@@ -63,24 +63,41 @@ strong {
     color: #004882;
 }
 
-
-
-nav li a {
+nav li:not(.login-link) a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 15px;
-    display: inline-block; 
+    display: inline-block;
 }
 
-nav li a:hover, .active-link {
+nav li:not(.login-link) a:hover,
+nav li:not(.login-link) .active-link {
     background-color: #31B2C5;
     color: white;
 }
+
 
 /* Icon Styles */
 .icon {
     color: #004882;
 }
+
+.login-icon {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #004882;
+    border-radius: 50%;
+    padding: 3px;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-icon:hover {
+    background-color: #31B2C5;
+    border: none;
+}
+
 
 /*Accordion styles*/
 .accordion-container {

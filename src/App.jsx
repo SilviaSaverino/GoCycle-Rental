@@ -17,6 +17,7 @@ import Specification from './Pages/Hire Bike/Dashboard/Specification/Specificati
 import Geometry from './Pages/Hire Bike/Dashboard/Geometry/Geometry.jsx'
 import BikeReview from './Pages/Hire Bike/Dashboard/BikeReview/BikeReview.jsx'
 import PageNotFound from './Pages/404 Page/404.jsx'
+import Login from './Pages/Login/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/GoCycle-Rental">
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="contactus/" element={<ContactUs />} />
         <Route path="help/" element={<Help />} />
         <Route path="hirebike/" element={<HireBike />} />
+        <Route path="login/" element={<Login />} />
 
         <Route path="bikeinfo/:id" element={<BikeInfo />} >
           <Route index element={<Intro />} />
@@ -40,7 +42,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="geometry" element={<Geometry />} />
           <Route path="bikereview" element={<BikeReview />} />
         </Route>
-       
+        
       </Route>
       <Route path="*" element={<PageNotFound/>} />
     </Routes>

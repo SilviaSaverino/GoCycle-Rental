@@ -2,9 +2,11 @@ import React from 'react'
 import { Link, NavLink } from "react-router-dom"
 import './Navbar.css'
 import logo from '../../assets/img/logo_gocycle.png'
+import loginIcon from '../../assets/img/login/loginIcon.png'
 
 
 function Navbar() {
+  
   return (
     <header>
       <nav>
@@ -34,6 +36,10 @@ function Navbar() {
             <NavLink
               to='HireBike/'
               className={({ isActive }) => isActive ? "active-link" : null}>Hire Bike</NavLink>
+          </li>
+          <li className="login-link">
+            <NavLink to="Login/">
+              <img className="login-icon" src={loginIcon} alt="Login Icon" /></NavLink>
           </li>
         </ul>
       </nav>
