@@ -10,6 +10,7 @@ export default function AuthRequired() {
         to="/Login"
         state={{message:"Please, log in to access this feature."}}/>
         )
+        replace
     }
     return <Outlet />
 }

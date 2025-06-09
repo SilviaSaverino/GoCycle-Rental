@@ -19,7 +19,7 @@ export default function Login() {
             .then(data => {
                 console.log(data)
                 setUserErr(null)
-                navigate("/hirebike")
+                navigate("/hirebike", { replace: true })
             })
             .catch(err => {
                 setUserErr(err)
