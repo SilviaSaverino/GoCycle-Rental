@@ -1,18 +1,24 @@
-import React from 'react'   
-import { Outlet, Navigate } from 'react-router-dom'
+import React from 'react'
+import { Outlet, Navigate, useLocation } from 'react-router-dom'
 
 export default function AuthRequired() {
-    const authenticated = false
+    const isAuthenticated = localStorage.getItem("loggedin") === "true" 
+    const location = useLocation()
 
-    if(!authenticated) {
+    if (!isAuthenticated) {
         return (
-        <Navigate 
-        to="/Login"
-        state={{message:"Please, log in to access this feature."}}
-        replace
-        />
+            <Navigate
+                to="/Login"
+                state={
+                    {
+                        message: "Please, log in to access this feature.",
+                        userNavigatingFrom: location.pathname
+                    }
+                }
+                replace
+            />
         )
-        
+
     }
     return <Outlet />
 }

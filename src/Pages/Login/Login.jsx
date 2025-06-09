@@ -11,6 +11,7 @@ export default function Login() {
     const location = useLocation()
     // console.log(location)
     const navigate = useNavigate()
+    const userNavigatingFrom = location.state?.userNavigatingFrom || "/hirebike"
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -19,7 +20,8 @@ export default function Login() {
             .then(data => {
                 console.log(data)
                 setUserErr(null)
-                navigate("/hirebike", { replace: true })
+                localStorage.setItem("loggedin", true)
+                navigate(userNavigatingFrom, { replace: true })
             })
             .catch(err => {
                 setUserErr(err)
