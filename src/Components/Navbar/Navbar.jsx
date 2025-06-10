@@ -24,8 +24,8 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to='ContactUs/'
-              className={({ isActive }) => isActive ? "active-link" : null}>Contact Us</NavLink>
+              to='Reviews/'
+              className={({ isActive }) => isActive ? "active-link" : null}>Reviews</NavLink>
           </li>
           <li>
             <NavLink

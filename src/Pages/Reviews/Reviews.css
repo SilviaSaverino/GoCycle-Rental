@@ -1,0 +1,41 @@
+.reviews-container {
+    margin-top: 30px;
+}
+
+.reviews-header {
+    background-color: #31B2C5;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.reviews-header img {
+    border-radius: 20px;
+    min-width: 400px;
+    border: 3px solid #004882;
+    object-fit: contain;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.star-rating {
+    margin-top: 30px;
+    display: flex;
+    align-items:center;
+    font-size: 0.8em;
+}
+
+.star-list {
+    display: flex;
+    font-size: 1.2em !important;
+    color: gold;
+}
+
+.reviews-count p {
+    font-size: 0.8em;
+}
+
