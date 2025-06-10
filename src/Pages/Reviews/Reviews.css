@@ -1,5 +1,11 @@
+.sort-reviews {
+    display: flex;
+    justify-content: space-between;
+    }
+
 .reviews-container {
     margin-top: 30px;
+    background-color: #faf7f7;
 }
 
 .reviews-header {
@@ -12,7 +18,6 @@
 .reviews-header img {
     border-radius: 20px;
     min-width: 400px;
-    border: 3px solid #004882;
     object-fit: contain;
 }
 
@@ -32,10 +37,58 @@
 .star-list {
     display: flex;
     font-size: 1.2em !important;
-    color: gold;
+}
+
+.star-icon {
+    color: rgb(241, 211, 39);
+}
+
+/* Filter Reviews */
+.filter-reviews-container {
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 .reviews-count p {
     font-size: 0.8em;
+}
+.leave-review-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leave-review-cta button{
+   align-self: flex-end;
+   font-size: 1em;
+   color: white;
+   background-color: #004882;
+   padding: 10px 20px;
+}
+
+.leave-review-cta button:hover {
+    background-color: #31B2C5;
+}
+.star-rating-count {
+    display: flex;
+}
+
+/* Bike type */
+
+.bike-by-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+select {
+    min-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
 }
 

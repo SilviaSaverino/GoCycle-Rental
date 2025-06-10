@@ -3,6 +3,8 @@ import "./Reviews.css"
 import bikeImage from "../../assets/img/reviews_img.avif"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
+
 
 
 export default function Reviews() {
@@ -15,11 +17,11 @@ export default function Reviews() {
                     <div className="reviews-count">
                         <div className="star-rating">
                             <ul className="star-list">
-                                <li><FontAwesomeIcon icon={faStar} /></li>
-                                <li><FontAwesomeIcon icon={faStar} /></li>
-                                <li><FontAwesomeIcon icon={faStar} /></li>
-                                <li><FontAwesomeIcon icon={faStar} /></li>
-                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <li><FontAwesomeIcon icon={faStar} className="star-icon" /></li>
+                                <li><FontAwesomeIcon icon={faStar} className="star-icon" /></li>
+                                <li><FontAwesomeIcon icon={faStar} className="star-icon" /></li>
+                                <li><FontAwesomeIcon icon={faStar} className="star-icon" /></li>
+                                <li><FontAwesomeIcon icon={faStar} className="star-icon" /></li>
                             </ul>
                             <p>4.8/5</p>
                         </div>
@@ -27,6 +29,84 @@ export default function Reviews() {
                     </div>
                 </div>
                 <img src={bikeImage} alt="image of a bike against a wall" />
+            </div>
+
+            <div className="filter-reviews-container">
+                <div className="leave-review-cta">
+                    <h2>Filter Reviews</h2>
+                    <button> <FontAwesomeIcon icon={faPenToSquare}/>Leave a Review</button>
+                </div>
+                <div className="sort-reviews">
+                    <div className="rating">
+                        <h3>Rating</h3>
+                        <div className="star-rating-count">
+                            <input type="checkbox" id="5-star" name="rating" value="5" />
+                            <div>
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <span>(846)</span>
+                            </div>
+                        </div>
+                        <div className="star-rating-count">
+                            <input type="checkbox" id="4-star" name="rating" value="4" />
+                            <div>
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <span>(725)</span>
+                            </div>
+                        </div>
+                        <div className="star-rating-count">
+                            <input type="checkbox" id="3-star" name="rating" value="3" />
+                            <div>
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <FontAwesomeIcon icon={faStar} className="star-icon" />
+                                <span>(230)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bike-type-selection">
+                        <h3>Bike type</h3>
+                        <div className="bike-by-type">
+                            <div>
+                                <input type="checkbox" id="mountain" name="rating" value="mountain" />
+                                <label htmlFor="mountain"> Mountain bikes</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="road" name="rating" value="road" />
+                                <label htmlFor="road"> Road bikes</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="electric" name="rating" value="electric" />
+                                <label htmlFor="electric"> Electric bikes</label>
+                            </div>
+                            <div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="kids" name="rating" value="kids" />
+                                <label htmlFor="kids"> Kids bikes</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="location">
+                        <h3>Location</h3>
+                        <select>
+                            <option>All Locations</option>
+                            <option>New York</option>
+                            <option>London</option>
+                            <option>Barcelona</option>
+                            <option>Milan</option>
+                            <option>Berlin</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div >
 
