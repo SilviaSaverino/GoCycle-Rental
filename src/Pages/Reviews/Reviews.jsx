@@ -5,9 +5,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 
+import { getReviews } from "../../../apiReviews.js"
 
 
 export default function Reviews() {
+
+    const [reviews, setReviews] = React.useState([]);
+    const [reviewsError, setReviewsError] = React.useState(null);
+    
+
+    React.useEffect(() => {
+        async function fetchReviews() {
+            try {
+                const reviews = await getReviews();
+                setReviews(reviews);
+                console.log(reviews);
+            } catch (error) {
+                setReviewsError(error);
+                console.error("Error fetching reviews:", error);
+            }
+        }
+
+        fetchReviews();
+    }, []);
+
+    
+    if (reviewsError) {
+        return <p className="errorMessage">Error: <span className="error">{error.message}</span></p>
+    }
+
+    const review = reviews.length >0 && reviews.map((review) => (
+      
+        <div className="review-card" key={review.id}>
+            <h3>{review.name}</h3>
+        </div>
+        ))
+   
+
     return (
         <div className="reviews-container">
             {/* Reviews Header */}
@@ -111,7 +145,7 @@ export default function Reviews() {
             <div className="latest-reviews-container">
                 <h3>Latest Customers Reviews</h3>
                 <div className="latest-reviews-cards">
-                    <p>cards here</p>
+                    {review}
         
                 </div>
             </div>
