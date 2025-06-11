@@ -30,6 +30,7 @@ import gallery7 from "./src/assets/img/gallery/gallery7.png";
 import gallery8 from "./src/assets/img/gallery/gallery8.png";
 import gallery9 from "./src/assets/img/gallery/gallery9.png";
 import gallery10 from "./src/assets/img/gallery/gallery10.png";
+import Reviews from "./src/Pages/Reviews/Reviews";
 
 
 
@@ -37,6 +38,7 @@ createServer({
     models: {
         bicycles: Model,
         galleries: Model,
+        reviews: Model,
         user: Model,
     },
 
@@ -1200,6 +1202,57 @@ createServer({
             name: "gallery image 10",
         });
 
+        // Reviews
+        server.create("review", {
+            id: "1",
+            name: "Sophie L.",
+            review:
+              "Rented an electric bike for a weekend trip and it was incredible! The battery lasted longer than expected and the ride was smooth even on hilly trails. GoCycle made everything easy.",
+            bikeType: "Electric",
+            rating: 5,
+            avatarImg: "renter-1.png",
+          });
+    
+          server.create("review", {
+            id: "2",
+            name: "Marcus T.",
+            review:
+              "Their mountain bikes are top quality—perfect for the rough terrain I explored. The staff gave great trail recommendations and setup tips. Definitely coming back!",
+            bikeType: "Mountain",
+            rating: 4,
+            avatarImg: "renter-2.png",
+          });
+    
+          server.create("review", {
+            id: "3",
+            name: "Elena R.",
+            review:
+              "Rented road bikes with my partner for a coastal ride—super light and well-maintained bikes. Booking was simple, and the pickup was quick. Five stars!",
+            bikeType: "Road",
+            rating: 5,
+            avatarImg: "renter-3.png",
+          });
+    
+          server.create("review", {
+            id: "4",
+            name: "James K.",
+            review:
+              "GoCycle made our family day out so much better. The kids bikes were the perfect size and in great condition. They even had helmets and safety gear included!",
+            bikeType: "Kids",
+            rating: 4,
+            avatarImg: "renter-4.png",
+          });
+    
+          server.create("review", {
+            id: "5",
+            name: "Aisha M.",
+            review:
+              "Loved the flexibility—booked last-minute and still got a high-performance electric bike. Customer service was friendly and super helpful. Highly recommend GoCycle!",
+            bikeType: "Electric",
+            rating: 5,
+            avatarImg: "renter-5.png",
+          });   
+
         // Test User
         server.create("user", {
             id:"123", 
@@ -1234,6 +1287,12 @@ createServer({
         this.get("/galleries/:id", (schema, request) => {
             const id = request.params.id;
             return schema.galleries.find(id);
+        });
+
+        // Reviews
+        this.get("/reviews", (schema, request) => {
+            // return new Response(400, {}, {error: "Error fetching reviews data"})
+            return schema.reviews.all();
         });
 
         // User Login

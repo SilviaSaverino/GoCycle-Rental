@@ -10,6 +10,7 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 export default function Reviews() {
     return (
         <div className="reviews-container">
+            {/* Reviews Header */}
             <div className="reviews-header">
                 <div className="reviews-page-intro">
                     <h1>What Our Customers Say</h1>
@@ -30,12 +31,13 @@ export default function Reviews() {
                 </div>
                 <img src={bikeImage} alt="image of a bike against a wall" />
             </div>
-
+            {/* Filter reviews */}
             <div className="filter-reviews-container">
                 <div className="leave-review-cta">
                     <h2>Filter Reviews</h2>
-                    <button> <FontAwesomeIcon icon={faPenToSquare}/>Leave a Review</button>
+                    <button> <FontAwesomeIcon icon={faPenToSquare} />Leave a Review</button>
                 </div>
+                {/* rating-sort reviews */}
                 <div className="sort-reviews">
                     <div className="rating">
                         <h3>Rating</h3>
@@ -87,9 +89,6 @@ export default function Reviews() {
                                 <label htmlFor="electric"> Electric bikes</label>
                             </div>
                             <div>
-
-                            </div>
-                            <div>
                                 <input type="checkbox" id="kids" name="rating" value="kids" />
                                 <label htmlFor="kids"> Kids bikes</label>
                             </div>
@@ -106,6 +105,14 @@ export default function Reviews() {
                             <option>Berlin</option>
                         </select>
                     </div>
+                </div>
+            </div>
+            {/* Latest customers reviews */}
+            <div className="latest-reviews-container">
+                <h3>Latest Customers Reviews</h3>
+                <div className="latest-reviews-cards">
+                    <p>cards here</p>
+        
                 </div>
             </div>
         </div >
