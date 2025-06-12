@@ -92,3 +92,42 @@ select {
     border-radius: 10px;
 }
 
+/* Latest Reviews*/
+.latest-reviews-container {
+    padding: 30px;
+}
+
+.latest-reviews-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-card {
+    background-color: red;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    max-width: 33%;
+}
+
+.avatar-img {
+    width: 50px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.review {
+    margin: 10px 0;
+}
+
+.date-location {
+    font-size: 0.8em;
+}
+

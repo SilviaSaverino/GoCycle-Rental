@@ -32,6 +32,11 @@ import gallery9 from "./src/assets/img/gallery/gallery9.png";
 import gallery10 from "./src/assets/img/gallery/gallery10.png";
 import Reviews from "./src/Pages/Reviews/Reviews";
 
+import reviewsAvatar1 from "./src/assets/img/reviews/reviews_avatar1.webp";
+import reviewsAvatar2 from "./src/assets/img/reviews/reviews_avatar1.webp";
+import reviewsAvatar3 from "./src/assets/img/reviews/reviews_avatar1.webp";
+import reviewsAvatar4 from "./src/assets/img/reviews/reviews_avatar1.webp";
+import reviewsAvatar5 from "./src/assets/img/reviews/reviews_avatar1.webp";
 
 
 createServer({
@@ -1206,51 +1211,61 @@ createServer({
         server.create("review", {
             id: "1",
             name: "Sophie L.",
+            location: "London, UK",
+            date: "2023-10-15",
             review:
               "Rented an electric bike for a weekend trip and it was incredible! The battery lasted longer than expected and the ride was smooth even on hilly trails. GoCycle made everything easy.",
             bikeType: "Electric",
             rating: 5,
-            avatarImg: "renter-1.png",
+            imageUrl: reviewsAvatar1,
           });
     
           server.create("review", {
             id: "2",
             name: "Marcus T.",
+            location: "London, UK",
+            date: "2023-10-15",
             review:
               "Their mountain bikes are top quality—perfect for the rough terrain I explored. The staff gave great trail recommendations and setup tips. Definitely coming back!",
             bikeType: "Mountain",
             rating: 4,
-            avatarImg: "renter-2.png",
+            avatarImg: reviewsAvatar2,
           });
     
           server.create("review", {
             id: "3",
             name: "Elena R.",
+            location: "London, UK",
+            date: "2023-10-15",
             review:
               "Rented road bikes with my partner for a coastal ride—super light and well-maintained bikes. Booking was simple, and the pickup was quick. Five stars!",
             bikeType: "Road",
             rating: 5,
-            avatarImg: "renter-3.png",
+            avatarImg: reviewsAvatar3,
           });
     
           server.create("review", {
             id: "4",
             name: "James K.",
+            location: "London, UK",
+            date: "2023-10-15",
             review:
               "GoCycle made our family day out so much better. The kids bikes were the perfect size and in great condition. They even had helmets and safety gear included!",
             bikeType: "Kids",
             rating: 4,
-            avatarImg: "renter-4.png",
+            avatarImg: reviewsAvatar4,
           });
     
           server.create("review", {
             id: "5",
             name: "Aisha M.",
+            location: "London, UK",
+            date: "2023-10-15",
             review:
               "Loved the flexibility—booked last-minute and still got a high-performance electric bike. Customer service was friendly and super helpful. Highly recommend GoCycle!",
             bikeType: "Electric",
             rating: 5,
-            avatarImg: "renter-5.png",
+            avatarImg: reviewsAvatar5,
           });   
 
         // Test User
