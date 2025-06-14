@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar, faPenToSquare, faLocationDot, faBicycle } from "@fortawesome/free-solid-svg-icons"
 
 import { getUserInfo } from "../../../apiUsers.js"
-
+import RatingFilterRow from "../../Components/ReviewsRatings/ReviewsRatings.jsx"
 
 export default function Reviews() {
 
@@ -37,18 +37,24 @@ export default function Reviews() {
                     <h3>{user.name}</h3>
                 </div>
                 <div className="review-rating">
-                    <p><span>{user.review?.rating}</span>/5</p>
+                    {Array.from({ length: 5 }, (_, i) => (
+                        <FontAwesomeIcon
+                            key={i}
+                            icon={faStar}
+                            style={{ color: i < user.review?.rating ? "#f5c518" : "#ccc" }}
+                        />
+                    ))}
                 </div>
             </div>
             <div className="review-info">
                 <p className="review-content">{user.review?.content}</p>
                 <div className="date-location">
                     <p>{user.review?.date}</p>
-                    <p><FontAwesomeIcon icon={faBicycle} className="review-icons"/>{user.review?.bikeType} bike ~ <FontAwesomeIcon icon={faLocationDot} className="review-icons"/>{user.location} </p>
+                    <p><FontAwesomeIcon icon={faBicycle} className="review-icons" />{user.review?.bikeType} bike ~ <FontAwesomeIcon icon={faLocationDot} className="review-icons" />{user.location} </p>
                 </div>
             </div>
         </div>
-    
+
     ))
 
 
@@ -85,36 +91,9 @@ export default function Reviews() {
                 <div className="sort-reviews">
                     <div className="rating">
                         <h3>Rating</h3>
-                        <div className="star-rating-count">
-                            <input type="checkbox" id="5-star" name="rating" value="5" />
-                            <div>
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <span>(846)</span>
-                            </div>
-                        </div>
-                        <div className="star-rating-count">
-                            <input type="checkbox" id="4-star" name="rating" value="4" />
-                            <div>
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <span>(725)</span>
-                            </div>
-                        </div>
-                        <div className="star-rating-count">
-                            <input type="checkbox" id="3-star" name="rating" value="3" />
-                            <div>
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <FontAwesomeIcon icon={faStar} className="star-icon" />
-                                <span>(230)</span>
-                            </div>
-                        </div>
+                        <RatingFilterRow rating={5} count={846} />
+                        <RatingFilterRow rating={4} count={725} />
+                        <RatingFilterRow rating={3} count={230} />
                     </div>
 
                     <div className="bike-type-selection">
