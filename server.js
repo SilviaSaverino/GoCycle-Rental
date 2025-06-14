@@ -30,20 +30,19 @@ import gallery7 from "./src/assets/img/gallery/gallery7.png";
 import gallery8 from "./src/assets/img/gallery/gallery8.png";
 import gallery9 from "./src/assets/img/gallery/gallery9.png";
 import gallery10 from "./src/assets/img/gallery/gallery10.png";
-import Reviews from "./src/Pages/Reviews/Reviews";
+// import Reviews from "./src/Pages/Reviews/Reviews";
 
-import reviewsAvatar1 from "./src/assets/img/reviews/reviews_avatar1.webp";
-import reviewsAvatar2 from "./src/assets/img/reviews/reviews_avatar1.webp";
-import reviewsAvatar3 from "./src/assets/img/reviews/reviews_avatar1.webp";
-import reviewsAvatar4 from "./src/assets/img/reviews/reviews_avatar1.webp";
-import reviewsAvatar5 from "./src/assets/img/reviews/reviews_avatar1.webp";
+import userAvatar1 from "./src/assets/img/users/user_avatar1.webp";
+import userAvatar2 from "./src/assets/img/users/user_avatar1.webp";
+import userAvatar3 from "./src/assets/img/users/user_avatar1.webp";
+import userAvatar4 from "./src/assets/img/users/user_avatar1.webp";
+import userAvatar5 from "./src/assets/img/users/user_avatar1.webp";
 
 
 createServer({
     models: {
         bicycles: Model,
         galleries: Model,
-        reviews: Model,
         user: Model,
     },
 
@@ -1207,73 +1206,87 @@ createServer({
             name: "gallery image 10",
         });
 
-        // Reviews
-        server.create("review", {
-            id: "1",
-            name: "Sophie L.",
-            location: "London, UK",
-            date: "2023-10-15",
-            review:
-              "Rented an electric bike for a weekend trip and it was incredible! The battery lasted longer than expected and the ride was smooth even on hilly trails. GoCycle made everything easy.",
-            bikeType: "Electric",
-            rating: 5,
-            imageUrl: reviewsAvatar1,
-          });
-    
-          server.create("review", {
-            id: "2",
-            name: "Marcus T.",
-            location: "London, UK",
-            date: "2023-10-15",
-            review:
-              "Their mountain bikes are top quality—perfect for the rough terrain I explored. The staff gave great trail recommendations and setup tips. Definitely coming back!",
-            bikeType: "Mountain",
-            rating: 4,
-            avatarImg: reviewsAvatar2,
-          });
-    
-          server.create("review", {
-            id: "3",
-            name: "Elena R.",
-            location: "London, UK",
-            date: "2023-10-15",
-            review:
-              "Rented road bikes with my partner for a coastal ride—super light and well-maintained bikes. Booking was simple, and the pickup was quick. Five stars!",
-            bikeType: "Road",
-            rating: 5,
-            avatarImg: reviewsAvatar3,
-          });
-    
-          server.create("review", {
-            id: "4",
-            name: "James K.",
-            location: "London, UK",
-            date: "2023-10-15",
-            review:
-              "GoCycle made our family day out so much better. The kids bikes were the perfect size and in great condition. They even had helmets and safety gear included!",
-            bikeType: "Kids",
-            rating: 4,
-            avatarImg: reviewsAvatar4,
-          });
-    
-          server.create("review", {
-            id: "5",
-            name: "Aisha M.",
-            location: "London, UK",
-            date: "2023-10-15",
-            review:
-              "Loved the flexibility—booked last-minute and still got a high-performance electric bike. Customer service was friendly and super helpful. Highly recommend GoCycle!",
-            bikeType: "Electric",
-            rating: 5,
-            avatarImg: reviewsAvatar5,
-          });   
+        //Users
+        
+            server.create("user", {
+                id: "1",
+                name: "Sophie L.",
+                location: "London, UK",
+                avatarImg: userAvatar1,
+                review: {
+                    date: "2023-10-15",
+                    bikeType: "Electric",
+                    rating: 5,
+                    content:
+                        "Rented an electric bike for a weekend trip and it was incredible! The battery lasted longer than expected and the ride was smooth even on hilly trails. GoCycle made everything easy."
+                }
+            });
+
+            server.create("user", {
+                id: "2",
+                name: "Marcus T.",
+                location: "London, UK",
+                avatarImg: userAvatar2,
+                review: {
+                    date: "2023-10-15",
+                    bikeType: "Mountain",
+                    rating: 4,
+                    content:
+                        "Their mountain bikes are top quality—perfect for the rough terrain I explored. The staff gave great trail recommendations and setup tips. Definitely coming back!"
+                }
+            });
+
+            server.create("user", {
+                id: "3",
+                name: "Elena R.",
+                location: "London, UK",
+                avatarImg: userAvatar3,
+                review: {
+                    date: "2023-10-15",
+                    bikeType: "Road",
+                    rating: 5,
+                    content:
+                        "Rented road bikes with my partner for a coastal ride—super light and well-maintained bikes. Booking was simple, and the pickup was quick. Five stars!"
+                }
+            });
+
+            server.create("user", {
+                id: "4",
+                name: "James K.",
+                location: "London, UK",
+                avatarImg: userAvatar4,
+                review: {
+                    date: "2023-10-15",
+                    bikeType: "Kids",
+                    rating: 4,
+                    content:
+                        "GoCycle made our family day out so much better. The kids bikes were the perfect size and in great condition. They even had helmets and safety gear included!"
+                }
+            });
+
+            server.create("user", {
+                id: "5",
+                name: "Aisha M.",
+                location: "London, UK",
+                avatarImg: userAvatar5,
+                review: {
+                    date: "2023-10-15",
+                    bikeType: "Electric",
+                    rating: 5,
+                    content:
+                        "Loved the flexibility—booked last-minute and still got a high-performance electric bike. Customer service was friendly and super helpful. Highly recommend GoCycle!"
+                }
+            });
+        
+
 
         // Test User
         server.create("user", {
-            id:"123", 
+            id: "123",
             email: "testuser@gmail.com",
             password: "testpassword",
-            name: "TestUserName"}
+            name: "TestUserName"
+        }
         );
     },
 
@@ -1282,7 +1295,7 @@ createServer({
         this.namespace = "api";
         this.logging = false
         this.timing = 1000
-        
+
         this.get("/bicycles", (schema, request) => {
             // return new Response(400, {}, {error: "Error fetching bikes data"})
             return schema.bicycles.all();
@@ -1304,16 +1317,16 @@ createServer({
             return schema.galleries.find(id);
         });
 
-        // Reviews
-        this.get("/reviews", (schema, request) => {
-            // return new Response(400, {}, {error: "Error fetching reviews data"})
-            return schema.reviews.all();
+        // User
+        this.get("/user", (schema, request) => {
+            // return new Response(400, {}, {error: "Error fetching user data"})
+            return schema.users.all();
         });
 
         // User Login
         this.post("/login", (schema, request) => {
             const { email, password } = JSON.parse(request.requestBody)
-           
+
             const foundUser = schema.users.findBy({ email, password })
             if (!foundUser) {
                 return new Response(401, {}, { message: "No user with those credentials found!" })

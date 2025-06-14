@@ -5,51 +5,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 
-import { getReviews } from "../../../apiReviews.js"
+import { getUserInfo } from "../../../apiUsers.js"
 
 
 export default function Reviews() {
 
-    const [reviews, setReviews] = React.useState([]);
-    const [reviewsError, setReviewsError] = React.useState(null);
+    const [user, setUser] = React.useState([]);
+    const [userError, setUserError] = React.useState(null);
 
 
     React.useEffect(() => {
-        async function fetchReviews() {
+        async function fetchUserData() {
             try {
-                const reviews = await getReviews();
-                setReviews(reviews);
-                console.log(reviews);
+                const data = await getUserInfo();
+                setUser(data);
+                console.log(data);
             } catch (error) {
-                setReviewsError(error);
-                console.error("Error fetching reviews:", error);
+                setUserError(error);
+                console.error("Error fetching user info:", error);
             }
         }
-
-        fetchReviews();
+        fetchUserData();
     }, []);
 
 
-    if (reviewsError) {
-        return <p className="errorMessage">Error: <span className="error">{error.message}</span></p>
-    }
 
-    const review = reviews.length > 0 && reviews.map((review) => (
-
-        <div className="review-card" key={review.id}>
+    const userCards = user.length > 0 && user.map((user) => (
+        <div className="review-card" key={user.id}>
             <div className="review-member-info">
                 <div className="user-details">
-                    <img src={review.imageUrl} className="avatar-img" />
-                    <h3>{review.name}</h3>
-
+                    <img src={user.imageUrl} className="avatar-img" alt={`${user.name}'s avatar`} />
+                    <h3>{user.name}</h3>
                 </div>
                 <div className="review-info">
-                    <p> <span>{review.rating}/5</span> {review.date}</p>
-                    <p className="review">{review.review}</p>
+                    <p><span>{user.review?.rating}/5</span> {user.review?.date}</p>
+                    <p className="review">{user.review?.content}</p>
                     <div className="date-location">
-                        <p>{review.bikeType} bike ~ {review.location} </p>
+                        <p>{user.bikeType} bike ~ {user.location}</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -159,8 +152,7 @@ export default function Reviews() {
             <div className="latest-reviews-container">
                 <h2>Latest Customers Reviews</h2>
                 <div className="latest-reviews-cards">
-                    {review}
-
+                    {userCards}
                 </div>
             </div>
         </div >
