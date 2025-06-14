@@ -106,7 +106,6 @@ select {
 }
 
 .review-card {
-    background-color: red;
     padding: 30px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -115,19 +114,40 @@ select {
 
 .avatar-img {
     width: 50px;
+    border-radius: 50%;
+}
+
+.review-member-info {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px;
 }
 
 .user-details {
     display: flex;
     align-items: center;
     gap: 10px;
-
 }
-.review {
-    margin: 10px 0;
+
+.user-details h3 {
+    font-weight: bold;
+}
+
+.review-info {
+    margin-top: 10px;
 }
 
 .date-location {
     font-size: 0.8em;
+    margin-top: 10px;
 }
+
+.review-icons {
+    font-size: 1.4em;
+    color: #31B2C5;
+    margin-right: 5px;
+}
+
+
 

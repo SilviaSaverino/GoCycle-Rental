@@ -2,8 +2,7 @@ import React from "react"
 import "./Reviews.css"
 import bikeImage from "../../assets/img/reviews_img.avif"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStar } from "@fortawesome/free-solid-svg-icons"
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
+import { faStar, faPenToSquare, faLocationDot, faBicycle } from "@fortawesome/free-solid-svg-icons"
 
 import { getUserInfo } from "../../../apiUsers.js"
 
@@ -34,18 +33,22 @@ export default function Reviews() {
         <div className="review-card" key={user.id}>
             <div className="review-member-info">
                 <div className="user-details">
-                    <img src={user.imageUrl} className="avatar-img" alt={`${user.name}'s avatar`} />
+                    <img src={user.avatarImg} className="avatar-img" alt={`${user.name}'s avatar`} />
                     <h3>{user.name}</h3>
                 </div>
-                <div className="review-info">
-                    <p><span>{user.review?.rating}/5</span> {user.review?.date}</p>
-                    <p className="review">{user.review?.content}</p>
-                    <div className="date-location">
-                        <p>{user.bikeType} bike ~ {user.location}</p>
-                    </div>
+                <div className="review-rating">
+                    <p><span>{user.review?.rating}</span>/5</p>
+                </div>
+            </div>
+            <div className="review-info">
+                <p className="review-content">{user.review?.content}</p>
+                <div className="date-location">
+                    <p>{user.review?.date}</p>
+                    <p><FontAwesomeIcon icon={faBicycle} className="review-icons"/>{user.review?.bikeType} bike ~ <FontAwesomeIcon icon={faLocationDot} className="review-icons"/>{user.location} </p>
                 </div>
             </div>
         </div>
+    
     ))
 
 

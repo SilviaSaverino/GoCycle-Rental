@@ -32,11 +32,11 @@ import gallery9 from "./src/assets/img/gallery/gallery9.png";
 import gallery10 from "./src/assets/img/gallery/gallery10.png";
 // import Reviews from "./src/Pages/Reviews/Reviews";
 
-import userAvatar1 from "./src/assets/img/users/user_avatar1.webp";
-import userAvatar2 from "./src/assets/img/users/user_avatar1.webp";
-import userAvatar3 from "./src/assets/img/users/user_avatar1.webp";
-import userAvatar4 from "./src/assets/img/users/user_avatar1.webp";
-import userAvatar5 from "./src/assets/img/users/user_avatar1.webp";
+import userAvatar1 from "./src/assets/img/users/user_avatar1.png";
+import userAvatar2 from "./src/assets/img/users/user_avatar2.png";
+import userAvatar3 from "./src/assets/img/users/user_avatar3.png";
+import userAvatar4 from "./src/assets/img/users/user_avatar4.png";
+import userAvatar5 from "./src/assets/img/users/user_avatar5.png";
 
 
 createServer({
